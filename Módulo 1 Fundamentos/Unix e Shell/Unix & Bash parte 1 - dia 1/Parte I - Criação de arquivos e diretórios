@@ -1,0 +1,267 @@
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Imagens   Pastas		   unix_tests2
+ Documentos	     Modelos  'pastas sistemas3'   Vídeos
+ Downloads	     Música    Trybe
+carolina@carolina-Inspiron-3501 ~
+ % cd Pastas
+carolina@carolina-Inspiron-3501 ~/Pastas
+ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+carolina@carolina-Inspiron-3501 ~/Pastas
+ % cd ..
+carolina@carolina-Inspiron-3501 ~
+ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+carolina@carolina-Inspiron-3501 ~
+ % mkdir unix_tests
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Imagens   Pastas		   unix_tests
+ Documentos	     Modelos  'pastas sistemas3'   unix_tests2
+ Downloads	     Música    Trybe		   Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % touch trybe.txt
+carolina@carolina-Inspiron-3501 ~
+ % cp trybe.txt trybe_backup_txt
+carolina@carolina-Inspiron-3501 ~
+ % mv trybe.txt trybe1txt
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Modelos		 Trybe		    unix_tests2
+ Documentos	     Música		 trybe1txt	    Vídeos
+ Downloads	     Pastas		 trybe_backup_txt
+ Imagens	    'pastas sistemas3'	 unix_tests
+carolina@carolina-Inspiron-3501 ~
+ % 
+
+
+
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Imagens   Pastas		   unix_tests
+ Documentos	     Modelos  'pastas sistemas3'   unix_tests2
+ Downloads	     Música    Trybe		   Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd unix_tests2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % touch trybe.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cp trybe.txt trybe_backup.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe.txt trybe1.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % 
+
+
+
+
+
+
+
+
+
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % touch trybe.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cp trybe.txt trybe_backup.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cd ..
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Imagens   Pastas		   unix_tests
+ Documentos	     Modelos  'pastas sistemas3'   unix_tests2
+ Downloads	     Música    Trybe		   Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd unix_tests2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls *
+zsh: no matches found: *
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % touch trybe.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cp trybe.txt trybe_backup.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe.txt trybe1.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mkdir backup
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe_backup.txt/backup
+mv: falta o operando arquivo de destino após 'trybe_backup.txt/backup'
+Tente "mv --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv help
+mv: falta o operando arquivo de destino após 'help'
+Tente "mv --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv --help
+Uso: mv [OPÇÃO]... [-T] ORIGEM DESTINO
+ ou: mv [OPÇÃO]... ORIGEM... DIRETÓRIO
+ ou: mv [OPÇÃO]... -t DIRETÓRIO ORIGEM...
+Renomeia ORIGEM para DESTINO ou move ORIGEM(ns) para DIRETÓRIO.
+
+Argumentos obrigatórios para opções longas também o são para opções curtas.
+      --backup[=CONTROLE]      faz uma cópia de segurança de todo arquivo de
+                                 destino já existente
+  -b                           como --backup, mas não aceita argumentos
+  -f, --force                  não pergunta antes de sobrescrever
+  -i, --interactive            pergunta antes de sobrescrever
+  -n, --no-clobber             não sobrescreve um arquivo existente
+Se você especificar mais que um dentre -i, -f ou -n, apenas o último terá efeito.
+      --strip-trailing-slashes  remove quaisquer barras ao final de cada
+                                 argumento ORIGEM
+  -S, --suffix=SUFIXO          sobrescreve o sufixo comum de cópia de
+                                 segurança
+  -t, --target-directory=DIR   move todos os argumentos ORIGEM para o
+                                 diretório DIR
+  -T, --no-target-directory    trata DESTINO como um arquivo normal
+  -u, --update                 move somente quando o arquivo de ORIGEM for
+                                 mais novo do que o de destino ou quando o
+                                 arquivo de destino não existe
+  -v, --verbose                explica o que está sendo feito
+  -Z, --context                define o contexto de segurança SELinux do"
+                                 arquivo de destino para o tipo padrão
+      --help     mostra esta ajuda e sai
+      --version  informa a versão e sai
+
+O sufixo de cópia de segurança é "~", a não ser que esteja definido --suffix
+ou SIMPLE_BACKUP_SUFFIX. O método de controle de versão pode ser definido com
+--backup ou a variável de ambiente VERSION_CONTROL. Os valores possíveis são:
+
+  none, off       nunca faz cópias de segurança (mesmo se --backup for
+                    especificado)
+  numbered, t     faz cópias de segurança numeradas
+  existing, nil   numeradas se já existirem cópias de segurança numeradas,
+                    simples em caso contrário
+  simple, never   sempre faz cópias de segurança simples
+
+Página de ajuda do GNU coreutils: <https://www.gnu.org/software/coreutils/>
+Relate erros de tradução do mv: <https://translationproject.org/team/pt_BR.html>
+Documentação completa em: <https://www.gnu.org/software/coreutils/mv>
+ou disponível localmente via: info "(coreutils) mv invocation"
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe_backup.txt/unix_tests2/backup
+mv: falta o operando arquivo de destino após 'trybe_backup.txt/unix_tests2/backup'
+Tente "mv --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe_backup.txt/ unix_tests2/trybe_backup.txt/ backup
+mv: não foi possível obter estado de 'trybe_backup.txt/': Não é um diretório
+mv: não foi possível obter estado de 'unix_tests2/trybe_backup.txt/': Arquivo ou diretório inexistente
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe_backup.txt/backup
+mv: falta o operando arquivo de destino após 'trybe_backup.txt/backup'
+Tente "mv --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv/unix_tests2/trybe_backup.txt/backup
+zsh: arquivo ou diretório inexistente: mv/unix_tests2/trybe_backup.txt/backup
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv/unix_tests2/Pasta Pessoal/ trybe_backuo.txt/backup
+zsh: arquivo ou diretório inexistente: mv/unix_tests2/Pasta
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe_backup.txt backup
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mkdir backup2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv trybe_backup.txt/backup/backup2
+mv: falta o operando arquivo de destino após 'trybe_backup.txt/backup/backup2'
+Tente "mv --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv/backup/trybe_backup.txt/backup2
+zsh: arquivo ou diretório inexistente: mv/backup/trybe_backup.txt/backup2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv backup/trybe_backup.txt backup2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % rmdir backup
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % mv backup2 backup
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % pwd
+/home/carolina/unix_tests2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls *
+trybe1.txt
+
+backup:
+trybe_backup.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % rm -rf backup
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cd ..
+carolina@carolina-Inspiron-3501 ~
+ % 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Imagens   Pastas		   unix_tests
+ Documentos	     Modelos  'pastas sistemas3'   unix_tests2
+ Downloads	     Música    Trybe		   Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd unix_tests2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % head -5 skills.txt
+Internet
+Unix
+Bash
+HTML
+CSS
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % tail -4 skills.txt
+CSS
+JavaScript
+React
+SQL
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % rm *.txt
+

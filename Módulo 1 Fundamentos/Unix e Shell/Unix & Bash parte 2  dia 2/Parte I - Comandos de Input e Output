@@ -1,0 +1,999 @@
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Imagens   Pastas		   unix_tests
+ Documentos	     Modelos  'pastas sistemas3'   unix_tests2
+ Downloads	     Música    Trybe		   Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd unix_tests2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat > skill2.txt 
+Internet
+Unix
+Bash
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % less skill2.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat skill2.txt
+Internet
+Unix
+Bash
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat >> skill2.txt
+JavaScript
+Java
+c#
+Php
+python
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat skill2.txt
+Internet
+Unix
+Bash
+JavaScript
+Java
+c#
+Php
+python
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % wc -l skill2.txt
+8 skill2.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cp skill2.txt top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % head -3 top_skills.txt | sort top_skills.txt
+Bash
+c#
+Internet
+Java
+JavaScript
+Php
+python
+Unix
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ %  cp skill2.txt top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt | head -3 > top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt
+Bash
+c#
+Internet
+Java
+JavaScript
+Php
+python
+Unix
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt | > head -3 top_skills.txt
+zsh: command not found: -3
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt | head -3 > top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt | head -3 > top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort -o < skill2.txt | head -3 top_skills.txt
+sort: a opção requer um argumento -- “o”
+Tente "sort --help" para mais informações.
+Bash
+c#
+Internet
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort -o < skill2.txt | head -3 > top_skills.txt
+sort: a opção requer um argumento -- “o”
+Tente "sort --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort --help
+Uso: sort [OPÇÃO]... [ARQUIVO]...
+ ou: sort [OPÇÃO]... --files0-from=A
+Escreve de forma ordenada a concatenação do(s) ARQUIVO(s) na saída padrão.
+
+Se ARQUIVO não for especificado ou for -, lê a entrada padrão.
+
+Argumentos obrigatórios para opções longas também o são para opções curtas.
+Opções de ordenação:
+
+  -b, --ignore-leading-blanks  ignora espaços-brancos iniciais
+  -d, --dictionary-order      considera apenas espaços-brancos e caracteres
+                                alfanuméricos
+  -f, --ignore-case           ignora diferença entre maiúsculas e minúsculas
+  -g, --general-numeric-sort  compara de acordo com um valor numérico geral"
+  -i, --ignore-nonprinting    considera apenas caracteres exibíveis"
+  -M, --month-sort            compara (desconhecido) < "JAN" < ... < "DEZ"
+  -h, --human-numeric-sort    compara números legíveis por humanos (ex., 2K 1G)
+  -n, --numeric-sort          compara de acordo com o valor numérico do texto
+  -R, --random-sort           embaralha agrupando chaves idênticas; veja shuf(1)
+      --random-source=ARQUIVO obtém bytes de aleatoriedade do ARQUIVO
+  -r, --reverse               inverte o resultado das comparações
+      --sort=PALAVRA          ordena conforme PALAVRA:
+                                general-numeric -g (numérico geral),
+                                human-numeric -h (numérico humano),
+                                month -M (mês), numeric -n (numérico),
+                                random -R (aleatório), version -V (versão)
+  -V, --version-sort          ordem natural de números (de versão) com texto
+
+Outras opções:
+
+      --batch-size=NMESCL     mescla no máximo NMESCL entradas de uma vez;
+                                para maior uso de arquivos temporários
+  -c, --check, --check=diagnose-first  verifica se está ordenada; não ordena
+  -C, --check=quiet, --check=silent  como -c, mas não relata a primeira linha
+                                       errada
+      --compress-program=PROG  comprime temporários com PROG;
+                               descomprima-os com PROG -d
+      --debug               anota a parte da linha usada para ordenar,
+                              e avisa sobre uso questionável para a saída
+                              de erro padrão
+      --files0-from=A       lê a entrada dos arquivos especificados por
+                              nomes terminados em NULO no arquivo A;
+                              se A for -, lê nomes da entrada padrão
+  -k, --key=POS             ordena por um chave; POS fornece localização e tipo
+  -m, --merge               mescla os arquivos já ordenados; não ordena
+  -o, --output=ARQUIVO      escreve o resultado para ARQUIVO, e não para a
+                              saída padrão
+  -s, --stable              estabiliza a ordenação desabilitando a comparação
+                              da última esperança ("last-resort")
+  -S, --buffer-size=TAM     usa TAManho para o "buffer" de memória principal
+  -t, --field-separator=SEP  usa SEP em vez de transições de espaços não
+                              brancos para espaços-brancos
+  -T, --temporary-directory=DIR  usa DIR para temporários, e não $TMPDIR ou
+                              /tmp; múltiplas opções especificam múltiplos
+                              diretórios
+      --parallel=N          altera o número de ordenações simultâneas para N
+  -u, --unique              com -c, verifica se a ordenação é estrita;
+                              sem -c, emite apenas a primeira linha de uma
+                              sequência repetida
+  -z, --zero-terminated     termina linhas com byte 0, e não com nova linha
+      --help     mostra esta ajuda e sai
+      --version  informa a versão e sai
+
+POS é F[.C][OPÇÕES][,F[.C][OPÇÕES]] para posições de início e parada, onde F é
+o número de um campo e C é a posição do caractere no campo; ambos são contados
+a partir de 1, e a posição de parada padrão é o final da linha. Se -t nem -b
+está ativa, os caracteres em um campo são contados a partir do início de um
+espaço branco precedente. OPÇÕES se compõem de uma ou mais opções (de uma
+letra) de ordenação [bdfgiMhnRrV], as quais substituem as opções globais de
+ordenação para aquela chave. Se nenhuma chave for fornecida, usa a linha
+inteira como chave. Use --debug para diagnosticar o uso incorreta da chave.
+
+TAMANHO pode ser seguido pelos seguintes sufixos multiplicadores:
+% 1% de memória, b 1, k 1024 (padrão), e assim por diante com M, G, T, P, E,
+Z e Y.
+
+*** AVISO ***
+A localidade especificada no ambiente afeta a ordem de classificação.
+Defina LC_ALL=C para obter a ordenação tradicional que usa valores nativos de
+bytes.
+
+Página de ajuda do GNU coreutils: <https://www.gnu.org/software/coreutils/>
+Relate erros de tradução do sort: <https://translationproject.org/team/pt_BR.html>
+Documentação completa em: <https://www.gnu.org/software/coreutils/sort>
+ou disponível localmente via: info "(coreutils) sort invocation"
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt
+Bash
+c#
+Internet
+Java
+JavaScript
+Php
+python
+Unix
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (echo  sort < skill2.txt ) > top_skill.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls
+countries.txt  empty.tbt  phrases.txt  top_skill.txt
+empty.pdf      head	  skill2.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo  (sort < skill2.txt ) > top_skill.txt
+zsh: parse error near `)'
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort < skill2.txt ; echo ) > top_skill.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort -13 < skill2.txt ; echo ) > top_skill.txt
+sort: opção inválida -- “1”
+Tente "sort --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort  < skill2.txt ; head -3 ; echo ) > top_skill.txt
+^[[A^[[B^C
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt -3                                  
+sort: opção inválida -- “3”
+Tente "sort --help" para mais informações.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt | head -3
+Bash
+c#
+Internet
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort  < skill2.txt | head -3 ; echo ) > top_skill.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill.txt                                      
+zsh: arquivo ou diretório inexistente: skill.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt
+Bash
+c#
+Internet
+Java
+JavaScript
+Php
+python
+Unix
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo "asd"
+asd
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo "asd" > top_skill.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo "Carolina sua linda" > top_skill.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt                        
+Bash
+c#
+Internet
+Java
+JavaScript
+Php
+python
+Unix
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo "Carolina sua linda" > top_skill.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % head skill2.txt                          
+Internet
+Unix
+Bash
+JavaScript
+Java
+c#
+Php
+python
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % head -3 skill2.txt
+Internet
+Unix
+Bash
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt 
+Bash
+c#
+Internet
+Java
+JavaScript
+Php
+python
+Unix
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % head -3 skill.txt
+head: não foi possível abrir 'skill.txt' para leitura: Arquivo ou diretório inexistente
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % head -3 skill2.txt 
+Internet
+Unix
+Bash
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ %  sort < skill2.txt| head -3 skill2.txt 
+Internet
+Unix
+Bash
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ %  sort < skill2.txt| head -3           
+Bash
+c#
+Internet
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ %  sort < skill2.txt| head -3 
+Bash
+c#
+Internet
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo > "qualquer" top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat top_skill.txt 
+Carolina sua linda
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % echo "qualquer" > top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat top_skills.txt 
+qualquer
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt| head -3 | echo > top_skills.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat top_skills.txt 
+
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt| head -3                        
+Bash
+c#
+Internet
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt| head -3
+Bash
+c#
+Internet
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort < skill2.txt| head -3 ; echo > countries.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort < skill2.txt| head -3 ; echo) > countries.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % (sort < skill2.txt| head -3 ; echo) > top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat top_skills.txt 
+Bash
+c#
+Internet
+
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < skill2.txt | head -3 > top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % touch phrases2.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat > phrases.txt
+Segunda
+Terça 
+Quarta
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat phrases.txt
+Segunda
+Terça 
+Quarta
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % grep -iv 'br' phrases.txt | wc
+      3       3      23
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % grep -iv 'br' phrases.txt | wc -l
+3
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % grep -i 'br' phrases.txt | wc -l
+0
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat >> phrases.txt 
+Argentina
+Uruguai
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat phrases.txt
+Segunda
+Terça 
+Quarta
+Argentina
+Uruguai
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % phrases.txt countries.txt > bunch_of_things.txt
+zsh: command not found: phrases.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat phrases.txt countries.txt > bunch_of_things.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < bunch_of_things.txt 
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Quarta
+Romania
+Russian Federation
+Rwanda
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Segunda
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+St Kitts & Nevis
+St Lucia
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Terça 
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguai
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < bunch_of_things.txt | bunzip2
+bunzip2: (stdin) is not a bzip2 file.
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort bunch_of_things.txt | bunch_of_things.txt
+zsh: command not found: bunch_of_things.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < bunch_of_things.txt | bunch_of_things.txt
+zsh: command not found: bunch_of_things.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < bunch_of_things.txt > bunch_of_things.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat phrases.txt countries.txt > bunch_of_things.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort < bunch_of_things.txt 
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Quarta
+Romania
+Russian Federation
+Rwanda
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Segunda
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+St Kitts & Nevis
+St Lucia
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Terça 
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguai
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % sort -o bunch_of_things.txt bunch_of_things.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % cat bunch_of_things.txt 
+Afghanistan
+Albania
+Algeria
+Andorra
+Angola
+Antigua & Deps
+Argentina
+Argentina
+Armenia
+Australia
+Austria
+Azerbaijan
+Bahamas
+Bahrain
+Bangladesh
+Barbados
+Belarus
+Belgium
+Belize
+Benin
+Bhutan
+Bolivia
+Bosnia Herzegovina
+Botswana
+Brazil
+Brunei
+Bulgaria
+Burkina
+Burundi
+Cambodia
+Cameroon
+Canada
+Cape Verde
+Central African Rep
+Chad
+Chile
+China
+Colombia
+Comoros
+Congo
+Congo {Democratic Rep}
+Costa Rica
+Croatia
+Cuba
+Cyprus
+Czech Republic
+Denmark
+Djibouti
+Dominica
+Dominican Republic
+East Timor
+Ecuador
+Egypt
+El Salvador
+Equatorial Guinea
+Eritrea
+Estonia
+Ethiopia
+Fiji
+Finland
+France
+Gabon
+Gambia
+Georgia
+Germany
+Ghana
+Greece
+Grenada
+Guatemala
+Guinea
+Guinea-Bissau
+Guyana
+Haiti
+Honduras
+Hungary
+Iceland
+India
+Indonesia
+Iran
+Iraq
+Ireland {Republic}
+Israel
+Italy
+Ivory Coast
+Jamaica
+Japan
+Jordan
+Kazakhstan
+Kenya
+Kiribati
+Korea North
+Korea South
+Kosovo
+Kuwait
+Kyrgyzstan
+Laos
+Latvia
+Lebanon
+Lesotho
+Liberia
+Libya
+Liechtenstein
+Lithuania
+Luxembourg
+Macedonia
+Madagascar
+Malawi
+Malaysia
+Maldives
+Mali
+Malta
+Marshall Islands
+Mauritania
+Mauritius
+Mexico
+Micronesia
+Moldova
+Monaco
+Mongolia
+Montenegro
+Morocco
+Mozambique
+Myanmar, {Burma}
+Namibia
+Nauru
+Nepal
+Netherlands
+New Zealand
+Nicaragua
+Niger
+Nigeria
+Norway
+Oman
+Pakistan
+Palau
+Panama
+Papua New Guinea
+Paraguay
+Peru
+Philippines
+Poland
+Portugal
+Qatar
+Quarta
+Romania
+Russian Federation
+Rwanda
+Saint Vincent & the Grenadines
+Samoa
+San Marino
+Sao Tome & Principe
+Saudi Arabia
+Segunda
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Singapore
+Slovakia
+Slovenia
+Solomon Islands
+Somalia
+South Africa
+South Sudan
+Spain
+Sri Lanka
+St Kitts & Nevis
+St Lucia
+Sudan
+Suriname
+Swaziland
+Sweden
+Switzerland
+Syria
+Taiwan
+Tajikistan
+Tanzania
+Terça 
+Thailand
+Togo
+Tonga
+Trinidad & Tobago
+Tunisia
+Turkey
+Turkmenistan
+Tuvalu
+Uganda
+Ukraine
+United Arab Emirates
+United Kingdom
+United States
+Uruguai
+Uruguay
+Uzbekistan
+Vanuatu
+Vatican City
+Venezuela
+Vietnam
+Yemen
+Zambia
+Zimbabwe
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % 
+
+
