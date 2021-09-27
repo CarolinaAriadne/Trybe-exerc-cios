@@ -1,0 +1,69 @@
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Downloads	 Pastas		     Trybe
+ baixando	     Imagens	'pastas sistemas3'   unix_tests
+ com		     Modelos	 repósitorios	     unix_tests2
+ Documentos	     Música	 teste		     Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd trybe
+cd: arquivo ou diretório inexistente: trybe
+carolina@carolina-Inspiron-3501 ~
+ % cd Trybe
+carolina@carolina-Inspiron-3501 ~/Trybe
+ % cd Trybe-exercícios
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git checkout minha-nova-branch        
+error: pathspec 'minha-nova-branch' did not match any file(s) known to git
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git pull origin master
+From github.com:CarolinaAriadne/Trybe-exerc-cios
+ * branch            master     -> FETCH_HEAD
+Updating 9068d3d..29aee97
+Fast-forward
+ README.md | 5 +++++
+ 1 file changed, 5 insertions(+)
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git checkout minha-nova-branch
+error: pathspec 'minha-nova-branch' did not match any file(s) known to git
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git  checkout -b minha-nova-branch 
+Switched to a new branch 'minha-nova-branch'
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git status
+No ramo minha-nova-branch
+Changes not staged for commit:
+  (utilize "git add <arquivo>..." para atualizar o que será submetido)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   "M\303\263dulo 1 Fundamentos/Unix e Shell/Unix & Bash parte 1 - dia 1/Parte I - Cria\303\247\303\243o de arquivos e diret\303\263rios"
+
+Arquivos não monitorados:
+  (utilize "git add <arquivo>..." para incluir o que será submetido)
+	"M\303\263dulo 1 Fundamentos/Git & GitHub/"
+
+nenhuma modificação adicionada à submissão (utilize "git add" e/ou "git commit -a")
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git add .
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git commit -m "teste nova branch"
+[minha-nova-branch 3c8b54e] teste nova branch
+ 2 files changed, 41 insertions(+)
+ create mode 100644 "M\303\263dulo 1 Fundamentos/Git & GitHub/Git & GitHub dia 2 - Entendendo os comandos/Parte 1 - Baixando reposit\303\263rios com o git clone"
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % git push origin minha-nova-branch
+Enumerating objects: 14, done.
+Counting objects: 100% (14/14), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (9/9), 1.30 KiB | 1.30 MiB/s, done.
+Total 9 (delta 1), reused 0 (delta 0)
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+remote: 
+remote: Create a pull request for 'minha-nova-branch' on GitHub by visiting:
+remote:      https://github.com/CarolinaAriadne/Trybe-exerc-cios/pull/new/minha-nova-branch
+remote: 
+To github.com:CarolinaAriadne/Trybe-exerc-cios.git
+
+fim
+ * [new branch]      minha-nova-branch -> minha-nova-branch
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+
