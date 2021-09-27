@@ -1,0 +1,39 @@
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Downloads	 Pastas		     Trybe
+ baixando	     Imagens	'pastas sistemas3'   unix_tests
+ com		     Modelos	 repósitorios	     unix_tests2
+ Documentos	     Música	 teste		     Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd Downloads
+carolina@carolina-Inspiron-3501 ~/Downloads
+ % mkdir nova pasta git clone
+carolina@carolina-Inspiron-3501 ~/Downloads
+ % mkdir nova_pasta_git_clone
+carolina@carolina-Inspiron-3501 ~/Downloads
+ % cd nova pasta git clone
+cd: too many arguments
+carolina@carolina-Inspiron-3501 ~/Downloads
+ % cd nova_pasta_git_clone 
+carolina@carolina-Inspiron-3501 ~/Downloads/nova_pasta_git_clone
+ % git clone urlDoSeuRepositórioTrybeExercises
+fatal: repository 'urlDoSeuRepositórioTrybeExercises' does not exist
+carolina@carolina-Inspiron-3501 ~/Downloads/nova_pasta_git_clone
+ % git clone urlDoSeuRepositórioTrybeexercicios
+fatal: repository 'urlDoSeuRepositórioTrybeexercicios' does not exist
+carolina@carolina-Inspiron-3501 ~/Downloads/nova_pasta_git_clone
+ % git clone urlDoSeuRepositórioTrybe-exerc-cios
+fatal: repository 'urlDoSeuRepositórioTrybe-exerc-cios' does not exist
+carolina@carolina-Inspiron-3501 ~/Downloads/nova_pasta_git_clone
+ %  git clone urlDoSeuRepositórioTrybe-exercícios
+fatal: repository 'urlDoSeuRepositórioTrybe-exercícios' does not exist
+carolina@carolina-Inspiron-3501 ~/Downloads/nova_pasta_git_clone
+ % git clone https://github.com/CarolinaAriadne/Trybe-exerc-cios 
+Cloning into 'Trybe-exerc-cios'...
+remote: Enumerating objects: 13, done.
+remote: Counting objects: 100% (13/13), done.
+remote: Compressing objects: 100% (9/9), done.
+remote: Total 13 (delta 2), reused 10 (delta 2), pack-reused 0
+Unpacking objects: 100% (13/13), 8.06 KiB | 1.34 MiB/s, done.
+carolina@carolina-Inspiron-3501 ~/Downloads/nova_pasta_git_clone
+
