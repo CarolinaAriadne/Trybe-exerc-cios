@@ -1,0 +1,89 @@
+carolina@carolina-Inspiron-3501 ~
+ % ps
+    PID TTY          TIME CMD
+ 152677 pts/0    00:00:00 zsh
+ 152684 pts/0    00:00:00 ps
+carolina@carolina-Inspiron-3501 ~
+ % sleep 30 &
+[1] 152688
+carolina@carolina-Inspiron-3501 ~
+ %  kill %1
+[1]  + terminated  sleep 30                                                     
+carolina@carolina-Inspiron-3501 ~
+ % sleep 30
+^Z
+zsh: suspended  sleep 30
+carolina@carolina-Inspiron-3501 ~
+ % sleep 30 &
+[2] 152739
+carolina@carolina-Inspiron-3501 ~
+ % 
+[2]  - done       sleep 30
+carolina@carolina-Inspiron-3501 ~
+ % sleep 200
+^Z
+zsh: suspended  sleep 200
+carolina@carolina-Inspiron-3501 ~
+ % sleep 100
+^Z
+zsh: suspended  sleep 100
+carolina@carolina-Inspiron-3501 ~
+ % sleep 300 &
+[4] 152804
+carolina@carolina-Inspiron-3501 ~
+ % jobs
+[1]    suspended  sleep 30
+[2]  - suspended  sleep 200
+[3]  + suspended  sleep 100
+[4]    running    sleep 300
+carolina@carolina-Inspiron-3501 ~
+ % fg %4 
+[4]    running    sleep 300
+^Z
+zsh: suspended  sleep 300
+carolina@carolina-Inspiron-3501 ~
+ % ps
+    PID TTY          TIME CMD
+ 152677 pts/0    00:00:00 zsh
+ 152711 pts/0    00:00:00 sleep
+ 152779 pts/0    00:00:00 sleep
+ 152792 pts/0    00:00:00 sleep
+ 152804 pts/0    00:00:00 sleep
+ 152919 pts/0    00:00:00 ps
+carolina@carolina-Inspiron-3501 ~
+ % bg %3
+[3]    continued  sleep 100
+[3]    done       sleep 100                                                     
+carolina@carolina-Inspiron-3501 ~
+ % ps | grep sleep
+ 152711 pts/0    00:00:00 sleep
+ 152779 pts/0    00:00:00 sleep
+ 152804 pts/0    00:00:00 sleep
+carolina@carolina-Inspiron-3501 ~
+ % killall sleep
+carolina@carolina-Inspiron-3501 ~
+ % ps
+    PID TTY          TIME CMD
+ 152677 pts/0    00:00:00 zsh
+ 152711 pts/0    00:00:00 sleep
+ 152779 pts/0    00:00:00 sleep
+ 152804 pts/0    00:00:00 sleep
+ 153368 pts/0    00:00:00 ps
+carolina@carolina-Inspiron-3501 ~
+ % kill 152677
+carolina@carolina-Inspiron-3501 ~
+ % kill 152711
+carolina@carolina-Inspiron-3501 ~
+ % kill 152779
+carolina@carolina-Inspiron-3501 ~
+ % kill 152804
+carolina@carolina-Inspiron-3501 ~
+ % ps
+    PID TTY          TIME CMD
+ 152677 pts/0    00:00:00 zsh
+ 152711 pts/0    00:00:00 sleep
+ 152779 pts/0    00:00:00 sleep
+ 152804 pts/0    00:00:00 sleep
+ 153649 pts/0    00:00:00 ps
+carolina@carolina-Inspiron-3501 ~
+
