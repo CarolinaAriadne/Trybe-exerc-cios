@@ -1,0 +1,102 @@
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'   Downloads	 Pastas		     Trybe
+ baixando	     Imagens	'pastas sistemas3'   unix_tests
+ com		     Modelos	 repósitorios	     unix_tests2
+ Documentos	     Música	 teste		     Vídeos
+carolina@carolina-Inspiron-3501 ~
+ % cd unix_tests2
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls - l
+ls: não foi possível acessar '-': Arquivo ou diretório inexistente
+ls: não foi possível acessar 'l': Arquivo ou diretório inexistente
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls -l
+total 24
+-rw-rw-r-- 1 carolina carolina 1884 set 27 09:02 bunch_of_things.txt
+-rw-rw-r-- 1 carolina carolina 1842 set 26 17:36 countries.txt
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.pdf
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.tbt
+-rw-rw-r-- 1 carolina carolina    0 set 26 21:21 head
+-rw-rw-r-- 1 carolina carolina    0 set 27 00:13 phrases2.txt
+-rw-rw-r-- 1 carolina carolina   41 set 27 00:23 phrases.txt
+-rw-rw-r-- 1 carolina carolina   15 set 26 22:20 qualquer
+-rw-rw-r-- 1 carolina carolina   49 set 26 21:00 skill2.txt
+-rw-rw-r-- 1 carolina carolina   17 set 26 22:36 top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % chmod u+rw bunch_of_things.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls -l
+total 24
+-rw-rw-r-- 1 carolina carolina 1884 set 27 09:02 bunch_of_things.txt
+-rw-rw-r-- 1 carolina carolina 1842 set 26 17:36 countries.txt
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.pdf
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.tbt
+-rw-rw-r-- 1 carolina carolina    0 set 26 21:21 head
+-rw-rw-r-- 1 carolina carolina    0 set 27 00:13 phrases2.txt
+-rw-rw-r-- 1 carolina carolina   41 set 27 00:23 phrases.txt
+-rw-rw-r-- 1 carolina carolina   15 set 26 22:20 qualquer
+-rw-rw-r-- 1 carolina carolina   49 set 26 21:00 skill2.txt
+-rw-rw-r-- 1 carolina carolina   17 set 26 22:36 top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % chmod o+rw bunch_of_things.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls -l
+total 24
+-rw-rw-rw- 1 carolina carolina 1884 set 27 09:02 bunch_of_things.txt
+-rw-rw-r-- 1 carolina carolina 1842 set 26 17:36 countries.txt
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.pdf
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.tbt
+-rw-rw-r-- 1 carolina carolina    0 set 26 21:21 head
+-rw-rw-r-- 1 carolina carolina    0 set 27 00:13 phrases2.txt
+-rw-rw-r-- 1 carolina carolina   41 set 27 00:23 phrases.txt
+-rw-rw-r-- 1 carolina carolina   15 set 26 22:20 qualquer
+-rw-rw-r-- 1 carolina carolina   49 set 26 21:00 skill2.txt
+-rw-rw-r-- 1 carolina carolina   17 set 26 22:36 top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % chmod o-w bunch_of_things.txt                     
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls -l
+total 24
+-rw-rw-r-- 1 carolina carolina 1884 set 27 09:02 bunch_of_things.txt
+-rw-rw-r-- 1 carolina carolina 1842 set 26 17:36 countries.txt
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.pdf
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.tbt
+-rw-rw-r-- 1 carolina carolina    0 set 26 21:21 head
+-rw-rw-r-- 1 carolina carolina    0 set 27 00:13 phrases2.txt
+-rw-rw-r-- 1 carolina carolina   41 set 27 00:23 phrases.txt
+-rw-rw-r-- 1 carolina carolina   15 set 26 22:20 qualquer
+-rw-rw-r-- 1 carolina carolina   49 set 26 21:00 skill2.txt
+-rw-rw-r-- 1 carolina carolina   17 set 26 22:36 top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % chmod a-w bunch_of_things.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls -l
+total 24
+-r--r--r-- 1 carolina carolina 1884 set 27 09:02 bunch_of_things.txt
+-rw-rw-r-- 1 carolina carolina 1842 set 26 17:36 countries.txt
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.pdf
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.tbt
+-rw-rw-r-- 1 carolina carolina    0 set 26 21:21 head
+-rw-rw-r-- 1 carolina carolina    0 set 27 00:13 phrases2.txt
+-rw-rw-r-- 1 carolina carolina   41 set 27 00:23 phrases.txt
+-rw-rw-r-- 1 carolina carolina   15 set 26 22:20 qualquer
+-rw-rw-r-- 1 carolina carolina   49 set 26 21:00 skill2.txt
+-rw-rw-r-- 1 carolina carolina   17 set 26 22:36 top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % chmod 644 bunch_of_things.txt 
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+ % ls -l
+total 24
+-rw-r--r-- 1 carolina carolina 1884 set 27 09:02 bunch_of_things.txt
+-rw-rw-r-- 1 carolina carolina 1842 set 26 17:36 countries.txt
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.pdf
+-rw-rw-r-- 1 carolina carolina    0 set 26 17:51 empty.tbt
+-rw-rw-r-- 1 carolina carolina    0 set 26 21:21 head
+-rw-rw-r-- 1 carolina carolina    0 set 27 00:13 phrases2.txt
+-rw-rw-r-- 1 carolina carolina   41 set 27 00:23 phrases.txt
+-rw-rw-r-- 1 carolina carolina   15 set 26 22:20 qualquer
+-rw-rw-r-- 1 carolina carolina   49 set 26 21:00 skill2.txt
+-rw-rw-r-- 1 carolina carolina   17 set 26 22:36 top_skills.txt
+carolina@carolina-Inspiron-3501 ~/unix_tests2
+
