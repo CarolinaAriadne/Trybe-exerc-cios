@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista</title>
+     </head>
+        <body>
+            <h1>Lista de Amizade Trybe</h1>
+                <p>Lana</p>
+                    <li><a href="#característica1">Característica1</a></li>   
+                <p>Gabi</p>
+                     <li><a href="#característica2">Característica2</a></li>  
+                <p>Ro</p>
+                     <li><a href="#característica3">Característica3</a></li>  
+                <p id="característica1">1 Empática</p>
+                <p id="característica2">2 Simpática</p>
+                <p id="característica3">3 Inteligente</p>
+                <a href="https://www.google.com/" target="_blank">Google</a>
+        </body>   
+     </head>
+</html>
+
+___________________________________
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista</title>
+     </head>
+        <body>
+            <h1>Lista de Amizade Trybe</h1>
+                <p>Lana</p>
+                    <li><a href="#característica1">Característica1</a></li>   
+                <p>Gabi</p>
+                     <li><a href="#característica2">Característica2</a></li>  
+                <p>Ro</p>
+                     <li><a href="#característica3">Característica3</a></li>  
+                <p id="característica1">1 Empática</p>
+                <p id="característica2">2 Simpática</p>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+                <p id="característica3">3 Inteligente</p>
+                <a href="https://www.google.com/" target="_blank">Google</a>
+        </body>   
+     </head>
+</html>
+
+
+

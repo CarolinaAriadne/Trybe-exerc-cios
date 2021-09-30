@@ -1,0 +1,25 @@
+
+
+
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <title>Lista</title>
+     </head>
+        <body>
+            <h1>Lista de Amizade Trybe</h1>
+            <ul>
+                <li>Lana</li>
+                <li>Gabi</li>
+                <li>Ro</li>
+            </ul>
+            <img src="https://sbnped.com.br/images/amigos.jpg" width="300px">
+            <img src="trybe.png" width="300px">
+        </body>   
+     </head>
+</html>
+
+
+
+
