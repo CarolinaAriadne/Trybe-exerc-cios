@@ -2,30 +2,24 @@
     width: 200px;
     position:relative;
   }
-  
-  .goomba {
+    .goomba {
     position: relative;
     width: 100px;
     margin-left:100px;
     bottom: 35px;
   }
-  
-  .baloon {
+    .baloon {
       position:absolute;
       z-index: 1;
       margin-left: 300px;
-      bottom: 300px;
-  
+      bottom:650px;       
   }
-  
   .speach {
       position:absolute;
       z-index: 2;
       font-size:20px;
-      margin-left: 350px;
-      bottom: 400px;
-
-    
+      margin-left: 330px;
+      bottom: 750px; 
   }
   
   .bowser {
