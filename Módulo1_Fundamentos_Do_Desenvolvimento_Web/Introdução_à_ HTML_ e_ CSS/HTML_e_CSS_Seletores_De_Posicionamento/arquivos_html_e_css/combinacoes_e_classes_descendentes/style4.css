@@ -1,37 +1,57 @@
-
-
-.coramarela{
-     background-color:yellow ;
+lista {
+    background-color: lavender;
 }
-
-.ímpar{
-    text-transform: uppercase;
-
+.par {
+    color: green;
 }
-
-.par{
-    color:green;
-
+.impar {
+    text-transform:uppercase;
 }
-
-.vermelho{
-
-    color:red;
+.header {
+    color: red;
 }
-
-h1.vermelho{
-    font-size:40px;
-    border:solid;
-    border-color:black;
+h1.header {
+    font-size: 40px;
+    border: solid;
+    border-color: black;
     border-width: 1px;
-    
 }
-
-li{
+li {
     font-size: 20px;
 }
-
-li em{
-
+li em {
     font-weight: bold;
+}
+.azul {
+    color: blue;
+    margin-bottom: 2px;
+}
+.rosa {
+    background-color: pink;
+}
+a{
+    color: black;
+    text-decoration: none;
+}
+a:hover {
+    font-weight: bold;
+}
+.laranja:hover{
+    color: orangered;
+}
+
+.verde:hover{
+    color:chartreuse;
+}
+
+.preto:hover{
+    color:black;
+}
+
+.amarelo:hover{
+    color:yellow;
+}
+
+.green:hover{
+    color:green
 }
