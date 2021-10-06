@@ -1,0 +1,37 @@
+
+
+.coramarela{
+     background-color:yellow ;
+}
+
+.ímpar{
+    text-transform: uppercase;
+
+}
+
+.par{
+    color:green;
+
+}
+
+.vermelho{
+
+    color:red;
+}
+
+h1.vermelho{
+    font-size:40px;
+    border:solid;
+    border-color:black;
+    border-width: 1px;
+    
+}
+
+li{
+    font-size: 20px;
+}
+
+li em{
+
+    font-weight: bold;
+}
