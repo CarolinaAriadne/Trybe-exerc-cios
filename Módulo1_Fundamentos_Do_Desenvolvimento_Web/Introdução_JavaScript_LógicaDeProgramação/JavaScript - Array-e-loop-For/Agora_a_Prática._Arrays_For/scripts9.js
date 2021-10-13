@@ -6,6 +6,10 @@ for(let index = 0; index < numeros.length; index +=1){
 
         resultadoDaDivisão = numeros [index] /2; 
 
-    console.log("O resultado da divisão é " + resultadoDaDivisão);
+        console.log("O resultado da divisão é " + resultadoDaDivisão);
+
 }
+
+
+
 
