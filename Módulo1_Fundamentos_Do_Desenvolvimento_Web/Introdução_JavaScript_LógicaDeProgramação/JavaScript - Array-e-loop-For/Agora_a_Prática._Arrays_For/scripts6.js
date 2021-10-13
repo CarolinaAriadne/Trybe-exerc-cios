@@ -6,9 +6,18 @@ for (let index = 0; index < numbers.length; index += 1) {
 
     if (numbers[index] % 2 == 1) {
 
-        numberImpar = numberImpar +1;
+        numberImpar = numberImpar + 1;
+
     }
 
 }
 
-console.log("A quantidade de números ímpares é " + numberImpar);
+    if (numberImpar == 0) {
+
+        console.log("nenhum valor ímpar encontrado");
+    } else {
+
+        console.log(numberImpar);
+
+    }
+
