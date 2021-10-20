@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.1</title>
+
+    <style>
+        main,
+        section {
+            border-color: black;
+            border-style: solid;
+        }
+
+        .title {
+            text-align: center;
+        }
+
+        .main-content {
+            background-color: yellow;
+        }
+
+        .main-content .center-content {
+            background-color: red;
+            width: 50%;
+            margin: 0 auto;
+        }
+
+        .main-content .center-content p {
+            font-style: italic;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1 class="title">Exercício 5.1 - JavaEscripito </h1>
+    </header>
+    <main class="main-content">
+        <section class="center-content">
+            <p>Texto padrão do nosso site</p>
+            <p>-----</p>
+            <p>Trybe</p>
+        </section>
+    </main>
+    <script>
+
+        mudaTexto();
+
+        function mudaTexto() {
+
+            let mudaTexto2 = document.getElementsByTagName("p")[1];
+            mudaTexto2.innerHTML = "Trabalhando na área de TI, com um golden e quem sabe um bebê"
+
+        }
+
+        mudaCor();
+
+        function mudaCor() {
+
+            let mudaCor2 = document.getElementsByClassName("main-content")[0];
+            mudaCor2.style.background = "rgb(76,164,109)";
+
+        }
+
+        changeColor();
+
+        function changeColor() {
+
+            let changeColor2 = document.getElementsByClassName('center-content')[0];
+            changeColor2.style.background = 'white';
+        }
+
+        corrige();
+
+        function corrige() {
+
+            let changeText = document.getElementsByClassName('title')[0]
+
+            changeText.innerText = "Exercício 5.1 - JavaScript";
+
+        }
+
+        modificaTexto();
+
+        function modificaTexto() {
+
+            let mudaOTexto = document.getElementsByTagName('p')[0];
+            mudaOTexto.innerHTML = mudaOTexto.innerHTML.toUpperCase();
+
+        }
+
+        exibeConteúdo();
+
+        function exibeConteúdo() {
+
+            let mostraConteúdo = document.getElementsByTagName('p');
+
+            for (let index = 0; index < mostraConteúdo.length; index += 1) {
+
+                console.log(mostraConteúdo[index].innerHTML);
+
+            }
+
+        }
+
+    </script>
+</body>
+
+</html>
