@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width" />
+  <title>Exercício 5.2</title>
+  <style>
+    section {
+      border-color: black;
+      border-style: solid;
+    }
+
+    .title {
+      text-align: center;
+    }
+
+    .main-content {
+      background-color: yellow;
+    }
+
+    .main-content .center-content {
+      background-color: red;
+      width: 50%;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .main-content .center-content p {
+      font-style: italic;
+    }
+
+    .main-content .left-content {
+      background-color: green;
+      width: 60%;
+      margin-left: 0;
+      margin-right: auto;
+    }
+
+    .main-content .left-content .small-image {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      border-radius: 100%;
+    }
+
+    .main-content .right-content {
+      background-color: blue;
+      width: 60%;
+      margin-left: auto;
+      margin-right: 0;
+    }
+
+    .main-content .description {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <script>
+
+    let elementoPai = document.body; // achando elemento pai
+    let titulo = document.createElement('h1'); // criando elemento
+    titulo.textContent = 'Exercício 5.2 - JavaScript DOM' // criando nó de texto
+    elementoPai.appendChild(titulo); //inserir, anexar o elemento filho (frase) ao elemento pai (body)
+
+
+    let elementoPai2 = document.body; //achando elemento pai
+    let adicionandoTag = document.createElement('main')// criando elemento
+    adicionandoTag.className = 'main-content'// adicionando classe ao elemento
+    elementoPai2.appendChild(adicionandoTag); // anexar elemento filho main com classe, na body
+
+
+    let elementoPai3 = document.main; // achando elemento pai
+    let adicionandoSection = document.createElement('section'); // criando elemento
+    adicionandoSection.className = 'center-content'// adicionando classe ao elemento criado
+    adicionandoTag.appendChild(adicionandoSection); //adicionando elemento filho section ao pai main
+
+
+    let elementoPai4 = document.section; //achando elemento pai
+    let adicionandoP = document.createElement('p'); // criando elemento
+    adicionandoP.textContent = 'Foguete não tem ré' // criando nó de texto
+    adicionandoSection.appendChild(adicionandoP);// anexar elemento filho  p ao pai section
+
+
+    let elementoPai5 = document.main; // achando elemento pai
+    let adicionandoSection2 = document.createElement('section'); // criando elemento
+    adicionandoSection2.className = 'left-content'; // adicionando classe ao elemento criado
+    adicionandoTag.appendChild(adicionandoSection2);//adicionando elemento filho sectin com classe, ao elemento pai main
+
+    let elementoPai6 = document.main // achando elemento pai
+    let adicionandoSection3 = document.createElement('section'); // criando elemento
+    adicionandoSection3.className = 'right-content'; // adicionando classe ao elemento criado
+    adicionandoTag.appendChild(adicionandoSection3); // adicionando elemento filho section com classe, ao elemento pai main
+
+    let elementoPai7 = adicionandoSection2; // achando elemento pai
+    let adicionandoImagem = document.createElement('img'); // criando elemento
+    adicionandoImagem.setAttribute('src', 'https://picsum.photos/200') // adicionando a imagem
+    adicionandoImagem.className = 'small-image'; // adicionando classe ao elemento criado
+    adicionandoSection2.appendChild(adicionandoImagem); // adicionando elemento filho img com classe, ao elemento classe section
+
+
+    let ListaDeCores = [
+    'roxo',
+    'azul',
+    'amarelo',
+    'vermelho',
+    'preto',
+    'verde'
+    ];
+
+    let elementoPai8 = adicionandoSection3; // achando elemento pai
+    let adicionandoListaNãoOrdenada = document.createElement('ul') // adicionando elemento ul
+    adicionandoSection3.appendChild(adicionandoListaNãoOrdenada); //adicionando ul ao pai section
+
+    for(let index = 0; index < ListaDeCores.length; index +=1){
+
+      let lista = ListaDeCores [index]; //guardando os elementos do array em lista
+
+      let lista2 = document.createElement('li'); // criando elemento li
+      lista2.innerText = lista; //chamando lista2 (li), para que receba lista(esta que contém ListaDeCores). ListaDeCores,  que por sua vez, contém os elementos do array
+
+      adicionandoSection3.appendChild(lista2); //chamando elemento pai section, que vai receber como filho, lista2 (que contém a lista(que contém o array))
+
+    }
+
+    for (let index = 1; index <= 3; index += 1) {
+
+    let adicionandoPai9 = adicionandoTag; // achando elemento pai 
+    let adicionandoH3 = document.createElement ('h3'); // adicionando h3
+    adicionandoH3.innerHTML = 'Mostra' + index; 
+    adicionandoTag.appendChild(adicionandoH3); // adicionando h3 ao pai main 
+
+    }
+
+  </script>
+</body>
+
+</html>
