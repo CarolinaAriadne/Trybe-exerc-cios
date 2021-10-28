@@ -61,9 +61,9 @@
   <script>
 
     let elementoPai = document.body; // achando elemento pai
-    let titulo = document.createElement('h1'); // criando elemento
-    titulo.textContent = 'Exercício 5.2 - JavaScript DOM' // criando nó de texto
-    elementoPai.appendChild(titulo); //inserir, anexar o elemento filho (frase) ao elemento pai (body)
+    let título = document.createElement('h1'); // criando elemento
+    título.textContent = 'Exercício 5.2 - JavaScript DOM' // criando nó de texto
+    elementoPai.appendChild(título); //inserir, anexar o elemento filho (h1) ao elemento pai (body)
 
 
     let elementoPai2 = document.body; //achando elemento pai
@@ -102,21 +102,21 @@
 
 
     let ListaDeCores = [
-    'roxo',
-    'azul',
-    'amarelo',
-    'vermelho',
-    'preto',
-    'verde'
+      'roxo',
+      'azul',
+      'amarelo',
+      'vermelho',
+      'preto',
+      'verde'
     ];
 
-    let elementoPai8 = adicionandoSection3; // achando elemento pai
+    let elementoPai8 = adicionandoSection3; // achando elemento pai - uma das sections está dentro desta variável criada
     let adicionandoListaNãoOrdenada = document.createElement('ul') // adicionando elemento ul
     adicionandoSection3.appendChild(adicionandoListaNãoOrdenada); //adicionando ul ao pai section
 
-    for(let index = 0; index < ListaDeCores.length; index +=1){
+    for (let index = 0; index < ListaDeCores.length; index += 1) {
 
-      let lista = ListaDeCores [index]; //guardando os elementos do array em lista
+      let lista = ListaDeCores[index]; //guardando os elementos do array em lista
 
       let lista2 = document.createElement('li'); // criando elemento li
       lista2.innerText = lista; //chamando lista2 (li), para que receba lista(esta que contém ListaDeCores). ListaDeCores,  que por sua vez, contém os elementos do array
@@ -127,12 +127,36 @@
 
     for (let index = 1; index <= 3; index += 1) {
 
-    let adicionandoPai9 = adicionandoTag; // achando elemento pai 
-    let adicionandoH3 = document.createElement ('h3'); // adicionando h3
-    adicionandoH3.innerHTML = 'Mostra' + index; 
-    adicionandoTag.appendChild(adicionandoH3); // adicionando h3 ao pai main 
+      let adicionandoPai9 = adicionandoTag; // achando elemento pai - main que está dentro desta variável indicada
+      let adicionandoH3 = document.createElement('h3'); // adicionando h3
+      adicionandoH3.innerHTML = 'Mostra' + index; // adicionando texto ao h3 , para mostrar que h3 foi criado
+      adicionandoTag.appendChild(adicionandoH3); // adicionando h3 ao pai main 
 
     }
+
+    título.className = 'title'; //adicionando uma classe ao h1 que está dentro da variável título
+
+
+
+    let adicionandoClasseaoH3 = document.getElementsByTagName('h3'); // selecionando tag
+    for (let index = 0; index < 3; index += 1) {
+      adicionandoClasseaoH3[index].className = 'description';
+
+    }//adicinando a classe description nos 3 h3 criados 
+
+
+
+
+    // pegando elemento pai main (que está na variável adicionando tag) e removendo filho adicionandoSection
+    adicionandoTag.removeChild(adicionandoSection2);
+
+
+
+    let centralizandoSection3 = document.getElementsByClassName('right-content')[0]; // selecionando classe criada na posição zero
+    centralizandoSection3.style.marginRight = 'auto'; //atribuindo estilo a classe selecionada
+
+
+
 
   </script>
 </body>
