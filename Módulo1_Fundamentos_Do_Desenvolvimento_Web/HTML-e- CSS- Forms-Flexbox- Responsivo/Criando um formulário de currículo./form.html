@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de currículo</title>
+    <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Cadastro de currículo</h1>
+        <p>Preenchimento dos campos abaixo</p>
+    </header>
+    <main>
+    <form id='cv-form'>
+        <section class="form-row">    
+        <fieldset>  
+            <div class='line-content'>
+                <label for="name">Nome:</label> <!--etiqueta na frente do input-->
+                <input type='text' name='name' id='name' maxlength="40" required> <!--40caracteres, máximo input-->
+                </div>
+                <div class="line-content">
+                    <label for='email'>Email:</label>
+                <input class="email-input" type="email" name='email' id='email' maxlength="50" required>
+                </div>
+                <div class="line-content">
+                    <label for="cpf-number">CPF:</label>
+                    <input type='text' name='cpf' id='cpf-number' maxlength="11" required>
+                </div>
+                <div class="line-content">
+                <label for="adress">Endereço:</label>
+                <input  type="text" name="adress" id="adress" maxlength="200" required>
+                </div>
+                <div class='line-content'>
+                <label for="city">Cidade:</label>
+                <input type="text" name="city" id="city" maxlength="28" required>
+                </div>
+                <div class="line-content">
+                    <label for="state">Estado: </label>
+                    <select name="state" id="state" required>
+                      <option disabled selected value>Selecione seu estado</option>
+                    </select>
+                </div>
+                <div class="line-content">
+                <label for="houseType">Tipo de imóvel:</label>
+                <input type="radio" name="houseType" id="house" value="house" required>
+                <span>Casa</span>
+                <input type="radio" name="houseType" id="apartament" value="apartament" required>
+                <span>Apartamento</span>
+                </div>
+                </section>
+            </div>        
+        </fieldset>
+        <fieldset>
+        <div class='line-content'>
+        <label for="">Resumo do Currículo</label>
+        <textarea   id="resume" name="resume" maxlength="1000" cols="100" rows="20" required></textarea>
+        </div>
+        </fieldset>
+        <fieldset>
+            <div  class="line-content">
+            <label for="role">Cargo:</label>
+            <input type="text" id="role" name="role" maxlength="40" required>    
+            </div>       
+            <div class='line-content'>
+            <label for="roleDescription">Descrição do cargo:</label>
+            <input type="text" id="roleDescription" name="roleDescription" maxlength="500" required>
+            </div>
+            <div class='line-content'>
+            <label for="starDate">Data de início</label>
+            <input type="text" class="input-data" name="starDate" value="" required>
+            </div>
+      </fieldset>
+      <button class='submit-button' type='submit'>Enviar</button>
+    <button class='clear-button' type='button'>Limpar</button>
+    </form>
+    </main>
+    <!--<section class="form-data"></section>-->
+    <script src="script.js"></script>
+    </body>
+</html>
+
+
+<!--tag fieldset é usada para agrupar elementos relacionados em um formulário.       desenha uma caixa ao redor dos elementos relacionados.-->
+<!--  required especifica que um campo de entrada deve ser preenchido obrigatoriamente antes de enviar o formulário.-->
+
+
+<!--A <label>tag permite que você clique no rótulo e será tratada como clicar no elemento de entrada associado. Existem duas maneiras de criar essa associação:
+
+Uma maneira é envolver o elemento label ao redor do elemento de entrada:
+
+<label>Input here:
+    <input type='text' name='theinput' id='theinput'>
+</label>
+A outra maneira é usar o foratributo, fornecendo o ID da entrada associada:
+
+<label for="theinput">Input here:</label>
+<input type='text' name='whatever' id='theinput'>
+Isso é especialmente útil para uso com caixas de seleção e botões, pois significa que você pode marcar a caixa clicando no texto associado em vez de ter que bater na própria caixa.-->
+
+
+<!--selected: Uma lista suspensa localizada fora de um formulário (mas ainda parte do formulário):-->
+ 
+
+<!--O conteúdo entre as tags de abertura <option>e fechamento </option>é o que os navegadores exibirão em uma lista suspensa. No entanto, o valor do valueatributo é o que será enviado ao servidor quando um formulário for enviado.
+
+Nota: Se o valueatributo não for especificado, o conteúdo será passado como um valor.-->
+
+
+
+<!--O disabledatributo é um atributo booleano.
+
+Quando presente, especifica que uma opção deve ser desativada.
+
+Uma opção desabilitada é inutilizável e não clicável.
+
+O disabledatributo pode ser definido para impedir que um usuário selecione a opção até que alguma outra condição seja atendida (como selecionar uma caixa de seleção, etc.). Em seguida, um JavaScript é necessário para remover o valor desabilitado e tornar a opção selecionável.-->
+
+
+<!--Os botões de opção permitem que o usuário selecione apenas uma das opções limitadas. Os botões de rádio são normalmente apresentados em grupos de rádio (uma coleção de botões de rádio que descreve um conjunto de opções relacionadas). Apenas um botão de opção em um grupo pode ser selecionado ao mesmo tempo.-->
+
+
+<!--O rows e cols atributos permitem especificar um tamanho exato para o <textarea> pegar. Definir isso é uma boa idéia para manter a consistência, pois os padrões do navegador podem ser diferentes.-->
+
+
