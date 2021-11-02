@@ -5,7 +5,7 @@
 
 //     for(let index = 0; index < opcoesDeEstado.length; index +=1){ //passar pelos estados, e criar opções
 
-//         let criandoOptions = document.createElement('option'); //criando opcções
+//         let option = document.createElement('option'); //criando opcções
 //         option.innerText = opcoesDeEstado[index]; // option criada, recebe estado referente a posição index (que é um texto)
 //         option.value = opcoesDeEstado[index];// valor, texto escrito, nome do estado
 //         elementoPai.appendChild(option); // colocando as opções criadas, como filhas da tag que tem o id state (selecteds)
@@ -13,6 +13,8 @@
 //     }
 
 // }
+
+//opcoesDeEstado()
 
 
 function opcoesDeEstado(){
@@ -32,4 +34,5 @@ function opcoesDeEstado(){
 window.onload = function(){
 
     opcoesDeEstado();
+
 }
