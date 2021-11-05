@@ -1,0 +1,55 @@
+body {
+  margin-top: 50px;
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
+@media screen and (min-width: 1000px) {
+  h1 {
+    font-size: 50px;
+  }
+}
+
+img {
+  max-width: 100%;
+}
+
+figure {
+  margin: 0;
+}
+
+@media screen and (min-width: 1000px) {
+  .size {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .size1 {
+    font-size: 35px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .size2 {
+    font-size: 25px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .espacamento {
+    margin-top: 35px;
+    margin-bottom: 35px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  body {
+    background-color: burlywood;
+  }
+}
+
+figure {
+  float: left;
+  width: 35%;
+}
