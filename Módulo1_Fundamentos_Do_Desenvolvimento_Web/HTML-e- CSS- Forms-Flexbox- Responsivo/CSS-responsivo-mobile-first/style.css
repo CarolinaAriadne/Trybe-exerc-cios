@@ -24,8 +24,6 @@ p {
   font-weight: 300;
 }
 
-
-
 p strong {
   font-weight: 700;
 }
@@ -69,7 +67,6 @@ p strong {
   .card:nth-of-type(3) {
     display: block;
     background-color: blueviolet;
-   
   }
 }
 
@@ -77,17 +74,12 @@ p strong {
   .card:nth-of-type(3) {
     display: block;
     background-color: blueviolet;
-   
   }
 }
 
-
- @media screen and (max-width: 499px) and (min-width: 0px){
-  
-p.trick {
-  color: white;
-  font-size: 14px;
-  
+@media screen and (max-width: 499px) and (min-width: 0px) {
+  p.trick {
+    color: white;
+    font-size: 14px;
+  }
 }
-
-} 
