@@ -40,9 +40,6 @@
 display: flex;
 justify-content: center;
 padding: 20px;
-
-
-
 }
 
 .menu-container3{
@@ -54,7 +51,6 @@ flex-wrap: wrap;
 width: 550px;
 margin: auto;
 padding: 20px;
-
 }
 
 .menu-container4{
@@ -70,5 +66,4 @@ h4{
 
 display: flex;
 justify-content: center;
-
 }
