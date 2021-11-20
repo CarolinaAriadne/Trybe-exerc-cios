@@ -81,7 +81,3 @@ const totalPrice = (id, quantidade) => { // passando parâmetro 8, 2
 
 console.log(totalPrice(8,2));
 
-
-
-// Crie um algoritmo que receba o id de um produto e uma quantidade e retorne o preço total
-// ex: id: 8 e quantidade: 2 preço total: 432
