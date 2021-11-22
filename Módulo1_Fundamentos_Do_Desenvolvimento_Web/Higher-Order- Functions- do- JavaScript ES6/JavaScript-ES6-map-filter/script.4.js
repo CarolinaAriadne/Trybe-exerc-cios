@@ -70,8 +70,8 @@ const createArray = books.filter((object) => {
 
 // console.log(createArray);
 
-const orderArray = createArray.sort((data1,data2) => data1.releaseYear - data2.releaseYear);
+const orderArray = createArray.sort(
+  (data1, data2) => data1.releaseYear - data2.releaseYear
+);
 
 console.log(orderArray);
-
-
