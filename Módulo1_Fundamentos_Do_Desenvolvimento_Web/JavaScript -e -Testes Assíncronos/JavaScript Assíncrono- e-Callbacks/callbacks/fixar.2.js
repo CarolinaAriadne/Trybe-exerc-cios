@@ -29,6 +29,6 @@ getUser(userNationality); // deve imprimir "Ivan is Russian" depois de um certo 
 // linha 14: função delay chamada
 // linha 4 novamente: tendo em vista qye a função delay foi chamada (tempo passando)
 // linha 8 a 11
-// linha 13 // functionName (userFullName na vdd) é chamada tendo como parâmetro os dados de user, logo, será mostrada a frase de userFullName, com os dados do parâmetro const user.
+// linha 13 // functionName (userFullName na vdd) é chamada tendo como parâmetro os dados de user, logo, será mostrada a frase de userFullName, com os dados do parâmetro const user. operação assíncrona : retorno de user depois de um certo tempo, que varia;
 // idem com userNationality
 
