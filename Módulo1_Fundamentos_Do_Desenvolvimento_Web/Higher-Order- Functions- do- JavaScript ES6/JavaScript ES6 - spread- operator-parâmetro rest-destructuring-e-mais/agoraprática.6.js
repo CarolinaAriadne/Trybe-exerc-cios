@@ -8,3 +8,12 @@ const shelbyCobra = ['Shelby Cobra', 'Ford', 1963];
 const chiron = ['Chiron', 'Bugatti', 2016];
 
 
+const toObject = ([nome,marca,ano]) => ({nome, marca, ano});
+
+const resultado = toObject(palio);
+const resultado2 = toObject(shelbyCobra);
+const resultado3 = toObject(chiron);
+
+console.log(resultado);
+console.log(resultado2);
+console.log(resultado3)
