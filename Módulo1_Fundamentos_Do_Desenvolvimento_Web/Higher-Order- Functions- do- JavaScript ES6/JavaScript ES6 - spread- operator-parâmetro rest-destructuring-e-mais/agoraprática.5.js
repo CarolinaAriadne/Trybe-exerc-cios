@@ -6,6 +6,14 @@
 
 const myList = [1, 2, 3];
 
-const myList = ['o primeiro', 'o segundo', 'o terceiro'];
+const swap = ([primeiro, segundo, terceiro]) => {
 
-const novoArray = (([um, dois, tres]))
+ return [terceiro, segundo, primeiro];
+
+}
+
+let resultado = swap(myList);
+
+console.log(resultado);
+
+
