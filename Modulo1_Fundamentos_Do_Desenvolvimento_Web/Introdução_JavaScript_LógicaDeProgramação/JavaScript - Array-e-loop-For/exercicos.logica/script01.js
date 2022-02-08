@@ -1,3 +1,5 @@
+// // Dado um valor numérico, escreva-o por extenso
+
 let numero = "219";
 
 const tamanhoNumero = numero.length;
@@ -56,47 +58,64 @@ let numerosEspecificos = {
 
 for (let index = 0; index < numero.length; index++) {
   algarismo = numero.charAt(index);
-  //    console.log(algarismo, index)
   if (algarismo === "0") {
-    continue; // pula para o próximo algarismo, pula os else if e sobe no for novamente
+    continue; 
   } else if (index === 0) {
-    // verifica se é centena
-    if (tamanhoNumero === 3) {
-      palavra = centenas[algarismo];
-    } else if (tamanhoNumero === 2) {
-      if (numerosEspecificos.hasOwnProperty(numero)) {
-        palavra = palavra + numerosEspecificos[numero];
-        break;
-      } else {
-        palavra = dezenas[algarismo];
-      }
-    } else if (tamanhoNumero === 1) {
-      palavra = unidades[algarismo];
+    const terminou = handleFirstAlgarism();
+    if(terminou === true){
+      break;
     }
   } else if (index === 1) {
-    if (
-      tamanhoNumero === 3 &&
-      numerosEspecificos.hasOwnProperty(numero.substring(1)) 
-    ) {
-      palavra = palavra + " e " + numerosEspecificos[numero.substring(1)];
+   const terminou =  handleSecondAlgarism ();
+    if(terminou === true ) {
       break;
-    } else if (
-      tamanhoNumero === 2 &&
-      numerosEspecificos.hasOwnProperty(numero)
-    ) {
-      palavra = palavra + numerosEspecificos[numero];
-    } else if (tamanhoNumero === 2) {
-      palavra = palavra + " e " + unidades[algarismo];
-    } else {
-      palavra = palavra + " e " + dezenas[algarismo];
     }
+   
   } else if (index === 2) {
-    palavra = palavra + " e " + unidades[algarismo];
+    handleThirdAlgarism();
   }
 }
 
 console.log(palavra);
 
-// Dado um valor numérico, escreva-o por extenso
+function handleFirstAlgarism (){
+  // verifica se é centena
+  if (tamanhoNumero === 3) {
+    palavra = centenas[algarismo];
+  } else if (tamanhoNumero === 2) {
+    if (numerosEspecificos.hasOwnProperty(numero)) {
+      palavra = palavra + numerosEspecificos[numero];
+      return true;
+    } else {
+      palavra = dezenas[algarismo];
+    }
+  } else if (tamanhoNumero === 1) {
+    palavra = unidades[algarismo];
+  }
+  return false;
+}
 
-// 156 - cento e cinco e seis, sem a condição com o &&. -
+
+function handleSecondAlgarism  (){
+  if (
+    tamanhoNumero === 3 &&
+    numerosEspecificos.hasOwnProperty(numero.substring(1)) 
+  ) {
+    palavra = palavra + " e " + numerosEspecificos[numero.substring(1)]; // da posição 1 do array pra frente, então "pega" números 1 e 3 (posição 1 e 2)
+    return true;
+  } else if (
+    tamanhoNumero === 2 &&
+    numerosEspecificos.hasOwnProperty(numero)
+  ) {
+    palavra = palavra + numerosEspecificos[numero];
+  } else if (tamanhoNumero === 2) {
+    palavra = palavra + " e " + unidades[algarismo];
+  } else {
+    palavra = palavra + " e " + dezenas[algarismo];
+  }
+  return false;
+}
+
+function handleThirdAlgarism () {
+  palavra = palavra + " e " + unidades[algarismo];
+}
