@@ -1,0 +1,68 @@
+carolina@carolina-Inspiron-3501 ~
+ % docker pull debian:stable-slim
+stable-slim: Pulling from library/debian
+Digest: sha256:86e95a5e47a11a186cb16e6dd7212a560e952af63d12e4dd401075d4932f695b
+Status: Image is up to date for debian:stable-slim
+docker.io/library/debian:stable-slim
+carolina@carolina-Inspiron-3501 ~
+ % docker container run -it debian:stableslim
+Unable to find image 'debian:stableslim' locally
+^[[A^[[A^[[Adocker: Error response from daemon: manifest for debian:stableslim not found: manifest unknown: manifest unknown.
+See 'docker run --help'.
+carolina@carolina-Inspiron-3501 ~
+ % docker container run -it debian:stable-slim
+root@e5bcc80de6d3:/# cat /etc/*-release
+PRETTY_NAME="Debian GNU/Linux 11 (bullseye)"
+NAME="Debian GNU/Linux"
+VERSION_ID="11"
+VERSION="11 (bullseye)"
+VERSION_CODENAME=bullseye
+ID=debian
+HOME_URL="https://www.debian.org/"
+SUPPORT_URL="https://www.debian.org/support"
+BUG_REPORT_URL="https://bugs.debian.org/"
+root@e5bcc80de6d3:/# exit
+exit
+carolina@carolina-Inspiron-3501 ~
+ % docker ps -l
+CONTAINER ID   IMAGE                COMMAND   CREATED          STATUS                      PORTS     NAMES
+e5bcc80de6d3   debian:stable-slim   "bash"    43 seconds ago   Exited (0) 12 seconds ago             goofy_bhabha
+carolina@carolina-Inspiron-3501 ~
+ % docker start e5bcc80de6d3
+e5bcc80de6d3
+carolina@carolina-Inspiron-3501 ~
+ % docker container ls -a
+CONTAINER ID   IMAGE                COMMAND   CREATED              STATUS                   PORTS     NAMES
+e5bcc80de6d3   debian:stable-slim   "bash"    About a minute ago   Up 25 seconds                      goofy_bhabha
+95aa7586a6da   debian:stable-slim   "bash"    4 hours ago          Exited (0) 4 hours ago             naughty_mestorf
+35206c042aeb   debian               "bash"    4 hours ago          Exited (0) 4 hours ago             heuristic_wu
+carolina@carolina-Inspiron-3501 ~
+ % docker attach e5bcc80de6d3
+root@e5bcc80de6d3:/# cat /etc/debian_version
+11.2
+root@e5bcc80de6d3:/# exit
+exit
+carolina@carolina-Inspiron-3501 ~
+ % docker container ls -a
+CONTAINER ID   IMAGE                COMMAND   CREATED         STATUS                     PORTS     NAMES
+e5bcc80de6d3   debian:stable-slim   "bash"    3 minutes ago   Exited (0) 6 seconds ago             goofy_bhabha
+95aa7586a6da   debian:stable-slim   "bash"    4 hours ago     Exited (0) 4 hours ago               naughty_mestorf
+35206c042aeb   debian               "bash"    4 hours ago     Exited (0) 4 hours ago               heuristic_wu
+carolina@carolina-Inspiron-3501 ~
+ % docker container rm e5bcc80de6d3
+e5bcc80de6d3
+carolina@carolina-Inspiron-3501 ~
+ % docker container ls -a
+CONTAINER ID   IMAGE                COMMAND   CREATED       STATUS                   PORTS     NAMES
+95aa7586a6da   debian:stable-slim   "bash"    4 hours ago   Exited (0) 4 hours ago             naughty_mestorf
+35206c042aeb   debian               "bash"    4 hours ago   Exited (0) 4 hours ago             heuristic_wu
+carolina@carolina-Inspiron-3501 ~
+ % docker container run -it --rm andrius/ascii-patrol
+setfont: asciipat.psf: No such file or directory
+W=203, H=55
+Falling back to X11 input
+unable to connect to X11 display
+falling back to sticky stdin!
+carolina@carolina-Inspiron-3501 ~
+ % 
+
