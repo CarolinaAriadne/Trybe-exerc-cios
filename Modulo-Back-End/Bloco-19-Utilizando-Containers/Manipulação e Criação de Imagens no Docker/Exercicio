@@ -1,0 +1,209 @@
+carolina@carolina-Inspiron-3501 ~
+ % docker image -t cowsay
+unknown shorthand flag: 't' in -t
+See 'docker image --help'.
+
+Usage:  docker image COMMAND
+
+Manage images
+
+Commands:
+  build       Build an image from a Dockerfile
+  history     Show the history of an image
+  import      Import the contents from a tarball to create a filesystem image
+  inspect     Display detailed information on one or more images
+  load        Load an image from a tar archive or STDIN
+  ls          List images
+  prune       Remove unused images
+  pull        Pull an image or a repository from a registry
+  push        Push an image or a repository to a registry
+  rm          Remove one or more images
+  save        Save one or more images to a tar archive (streamed to STDOUT by default)
+  tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
+
+Run 'docker image COMMAND --help' for more information on a command.
+
+carolina@carolina-Inspiron-3501 ~
+ % docker build -t cowsay
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+carolina@carolina-Inspiron-3501 ~
+ % docker build -t cowsay 
+"docker build" requires exactly 1 argument.
+See 'docker build --help'.
+
+Usage:  docker build [OPTIONS] PATH | URL | -
+
+Build an image from a Dockerfile
+carolina@carolina-Inspiron-3501 ~
+ % pwd
+/home/carolina
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'	 Downloads		     Música		 sd-017-project-trybewallet
+ baixando		 Exercicio_git_com_Rafael    node_modules	 snap
+ com			 Exercicios-lógica	     package.json	 Trybe
+'Cursos na área de TI'	 Exercicios_outros	     package-lock.json	 unix_tests
+ dinamica-git		 exercises-logica-2	     Pastas		 Vídeos
+ discord.deb		 Imagens		    'pastas sistemas3'
+ Documentos		 informe-rendimentos-trybe   Público
+ doguinhos-app		 Modelos		     react-dockerized
+carolina@carolina-Inspiron-3501 ~
+ % cd Documentos 
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker build ./ -t cowsay  
+Sending build context to Docker daemon  331.8kB
+Step 1/2 : FROM chuanwen/cowsay:latest
+latest: Pulling from chuanwen/cowsay
+99ad4e3ced4d: Downloading  20.94MB/73MB
+ec5a723f4e2a: Download complete 
+2a175e11567c: Download complete 
+8d26426e95e0: Download complete 
+46e451596b7c: Download complete 
+c337767f8c73: Pulling fs layer 
+^C
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker build -t cowsay ./  
+Sending build context to Docker daemon  331.8kB
+Step 1/2 : FROM chuanwen/cowsay:latest
+latest: Pulling from chuanwen/cowsay
+99ad4e3ced4d: Pull complete 
+ec5a723f4e2a: Pull complete 
+2a175e11567c: Pull complete 
+8d26426e95e0: Pull complete 
+46e451596b7c: Pull complete 
+c337767f8c73: Pull complete 
+Digest: sha256:1f7a652a47fe7311c7e201644d44682e11e7ae4d3d7b03c1ce5c0df164de205c
+Status: Downloaded newer image for chuanwen/cowsay:latest
+ ---> d9ca6614554a
+Step 2/2 : ENTRYPOINT ["/usr/jogos/cowsay"]
+ ---> Running in 72270c85347c
+Removing intermediate container 72270c85347c
+ ---> ee94ebeb1987
+Successfully built ee94ebeb1987
+Successfully tagged cowsay:latest
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run cowsay "Olá"
+docker: Error response from daemon: failed to create shim: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "/usr/jogos/cowsay": stat /usr/jogos/cowsay: no such file or directory: unknown.
+ERRO[0000] error waiting for container: context canceled 
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run cowsay "Olá"
+docker: Error response from daemon: failed to create shim: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "/usr/jogos/cowsay": stat /usr/jogos/cowsay: no such file or directory: unknown.
+ERRO[0000] error waiting for container: context canceled 
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run -f "OLá"    
+unknown shorthand flag: 'f' in -f
+See 'docker container run --help'.
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run -f "Olá"
+unknown shorthand flag: 'f' in -f
+See 'docker container run --help'.
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run cowsay -f "Olá"
+docker: Error response from daemon: failed to create shim: OCI runtime create failed: container_linux.go:380: starting container process caused: exec: "/usr/jogos/cowsay": stat /usr/jogos/cowsay: no such file or directory: unknown.
+ERRO[0000] error waiting for container: context canceled 
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker images
+REPOSITORY             TAG           IMAGE ID       CREATED          SIZE
+cowsay                 latest        ee94ebeb1987   35 minutes ago   228MB
+ubuntu                 latest        ff0fea8310f3   6 days ago       72.8MB
+httpd                  2.4           b9bd7e513e0f   7 days ago       144MB
+debian                 stable-slim   63c7fbbbefe3   7 days ago       80.4MB
+debian                 latest        48c562c706d6   7 days ago       124MB
+hello-world            latest        feb5d9fea6a5   6 months ago     13.3kB
+chuanwen/cowsay        latest        d9ca6614554a   3 years ago      228MB
+andrius/ascii-patrol   latest        e8ee5d9e29bd   3 years ago      29.5MB
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker ps -a
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                     PORTS                                     NAMES
+9ec47657c638   cowsay               "/usr/jogos/cowsay -…"   12 minutes ago   Created                                                              silly_pare
+d142295269a9   cowsay               "/usr/jogos/cowsay O…"   22 minutes ago   Created                                                              awesome_hamilton
+64c1a03b93af   cowsay               "/usr/jogos/cowsay O…"   22 minutes ago   Created                                                              peaceful_aryabhata
+2aa936ea8a06   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   0.0.0.0:49156->80/tcp, :::49156->80/tcp   blissful_hellman
+4c5e1fc87eaf   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   80/tcp                                    priceless_hugle
+e6b30b8865fa   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   0.0.0.0:49155->80/tcp, :::49155->80/tcp   site-trybe
+77cd64f8350e   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   0.0.0.0:49153->80/tcp, :::49153->80/tcp   silly_morse
+95aa7586a6da   debian:stable-slim   "bash"                   29 hours ago     Exited (0) 29 hours ago                                              naughty_mestorf
+35206c042aeb   debian               "bash"                   29 hours ago     Exited (0) 29 hours ago                                              heuristic_wu
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker build ./ -t cowsay 
+Sending build context to Docker daemon  331.8kB
+Step 1/3 : FROM chuanwen/cowsay:latest
+ ---> d9ca6614554a
+Step 2/3 : ENTRYPOINT ["/usr/games/cowsay"]
+ ---> Running in 9df0b9ec2cb4
+Removing intermediate container 9df0b9ec2cb4
+ ---> b46bb09ac2c5
+Step 3/3 : CMD ["Olá!"]
+ ---> Running in e3cf834cec86
+Removing intermediate container e3cf834cec86
+ ---> 4efdd267c2f9
+Successfully built 4efdd267c2f9
+Successfully tagged cowsay:latest
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker ps -a
+CONTAINER ID   IMAGE                COMMAND                  CREATED          STATUS                     PORTS                                     NAMES
+9ec47657c638   ee94ebeb1987         "/usr/jogos/cowsay -…"   15 minutes ago   Created                                                              silly_pare
+d142295269a9   ee94ebeb1987         "/usr/jogos/cowsay O…"   25 minutes ago   Created                                                              awesome_hamilton
+64c1a03b93af   ee94ebeb1987         "/usr/jogos/cowsay O…"   25 minutes ago   Created                                                              peaceful_aryabhata
+2aa936ea8a06   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   0.0.0.0:49156->80/tcp, :::49156->80/tcp   blissful_hellman
+4c5e1fc87eaf   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   80/tcp                                    priceless_hugle
+e6b30b8865fa   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   0.0.0.0:49155->80/tcp, :::49155->80/tcp   site-trybe
+77cd64f8350e   httpd:2.4            "httpd-foreground"       9 hours ago      Exited (255) 2 hours ago   0.0.0.0:49153->80/tcp, :::49153->80/tcp   silly_morse
+95aa7586a6da   debian:stable-slim   "bash"                   29 hours ago     Exited (0) 29 hours ago                                              naughty_mestorf
+35206c042aeb   debian               "bash"                   29 hours ago     Exited (0) 29 hours ago                                              heuristic_wu
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker rm 9ec d14 64c
+9ec
+d14
+64c
+carolina@carolina-Inspiron-3501 ~/Documentos
+ %  docker image build ./ -t cowsay
+Sending build context to Docker daemon  331.8kB
+Step 1/3 : FROM chuanwen/cowsay:latest
+ ---> d9ca6614554a
+Step 2/3 : ENTRYPOINT ["/usr/games/cowsay"]
+ ---> Using cache
+ ---> b46bb09ac2c5
+Step 3/3 : CMD ["Olá!"]
+ ---> Using cache
+ ---> 4efdd267c2f9
+Successfully built 4efdd267c2f9
+Successfully tagged cowsay:latest
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run cowsay
+ _______
+< Olá! >
+ -------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run cowsay
+ _______
+< Olá! >
+ -------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % docker container run cowsay Muuuuuuuu
+ ___________
+< Muuuuuuuu >
+ -----------
+        \   ^__^
+         \  (oo)\_______
+            (__)\       )\/\
+                ||----w |
+                ||     ||
+carolina@carolina-Inspiron-3501 ~/Documentos
+ % 
+
