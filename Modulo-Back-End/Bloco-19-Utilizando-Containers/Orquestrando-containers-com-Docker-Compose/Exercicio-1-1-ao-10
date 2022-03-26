@@ -1,0 +1,323 @@
+carolina@carolina-Inspiron-3501 ~
+ % pwd
+/home/carolina
+carolina@carolina-Inspiron-3501 ~
+ % ls
+'Área de Trabalho'	 discord.deb		    Exercícios-lógica	        Modelos		    Pastas			 snap
+ baixando		 Documentos		    Exercicios_outros	        Música		   'pastas sistemas3'		 Trybe
+ com			 doguinhos-app		    exercises-logica-2	        node_modules	    Público			 unix_tests
+'Cursos na área de TI'	 Downloads		    Imagens		        package.json	    react-dockerized		 Vídeos
+ dinamica-git		 Exercicio_git_com_Rafael   informe-rendimentos-trybe   package-lock.json   sd-017-project-trybewallet
+carolina@carolina-Inspiron-3501 ~
+ % cd Trybe
+carolina@carolina-Inspiron-3501 ~/Trybe
+ % ls
+'Anotações conteúdo COURSE'			      exercicios-mentoria			        Projetos_Trybe
+ aula-hofs					      exercicios-React-repositorios		       'revisões Rod'
+'cheat-sheet - cheat-sheet.pdf TESTES RTL REACT'      Exercícios-repositório-de-lógica-Trybe	        sd-017-live-lectures
+'check list redux'				     'exer fork jotta'				       'SOFT SKILSS 15 de março 2022'
+'checklist redux com react'			     'Git e Hub passo a passo trabalho em equipe.txt'  'softs skills'
+'códigos das aulas'				      gitpages					        Teste1
+'como pesquisar na internet como um desenvolvedor?'  'imagem fluxo internet.jpg'		        test.npm.npx
+'Contrato Trybe e Código de Ética assinados'	     'launch correto'				        Treinos-rascunhos-projetos
+'dicas apresentação projeto'			     'lista de comandos terminal'		        Trybe-exercícios
+ Dinamica_Pull_Request				     'monitoria invertida. ex3.'		       'vídeos na internet complemento'
+ Exercício_Portfólio_Web			      prints-aula-ao-vivo
+carolina@carolina-Inspiron-3501 ~/Trybe
+ % cd Trybe-exercícios 
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % cd Modulo
+cd: arquivo ou diretório inexistente: Modulo
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios
+ % cd Modulo-Back-End 
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End
+ % cd Bloco-19-Utilizando-Containers 
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers
+ % cd Orquestrando-containers-com-Docker-Compose 
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker run -dit --name trybe-trybe -p 4545:80 -v "./apache2/htdocs" httpd:2.4
+a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker ps
+CONTAINER ID   IMAGE                   COMMAND              CREATED          STATUS          PORTS                                     NAMES
+a2b368c112e2   httpd:2.4               "httpd-foreground"   45 seconds ago   Up 44 seconds   0.0.0.0:4545->80/tcp, :::4545->80/tcp     trybe-trybe
+79ab73c1dc1f   mjgargani/ubuntu-ping   "bash"               6 hours ago      Up 6 hours                                                novo_container
+67e06ca81a36   httpd:2.4               "httpd-foreground"   9 hours ago      Up 9 hours      0.0.0.0:49153->80/tcp, :::49153->80/tcp   happy_keller
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker inspect trybe-trybe
+[
+    {
+        "Id": "a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec",
+        "Created": "2022-03-26T00:46:57.688212365Z",
+        "Path": "httpd-foreground",
+        "Args": [],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 72897,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2022-03-26T00:46:58.284238325Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:b9bd7e513e0fc49bd6703bde67cf6526033a9bade13a34b7be04e0e7339f6d2e",
+        "ResolvConfPath": "/var/lib/docker/containers/a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec/hostname",
+        "HostsPath": "/var/lib/docker/containers/a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec/hosts",
+        "LogPath": "/var/lib/docker/containers/a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec/a2b368c112e2e5eaa042da972f5c84a67b4ce4695bfa3fdd6440493dbe1316ec-json.log",
+        "Name": "/trybe-trybe",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "default",
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "4545"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "host",
+            "Dns": [],
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "KernelMemory": 0,
+            "KernelMemoryTCP": 0,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": false,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/e9d8d1f3dd35d0feb40d808cb524d03aba32763ed457f4a9701244b0dbaf30a1-init/diff:/var/lib/docker/overlay2/21cbbc80066a8656348ade8ee7bc33541cd517847638c9bb1244135094dbb66d/diff:/var/lib/docker/overlay2/4fe9585517243194f12532afbeaddac6a2e35b9a67ebd74c3895cb4cea593f04/diff:/var/lib/docker/overlay2/83eb1dc1cf5e1ef594f545a32c3a92d5975e6b6c80a4b64f5107165022a4f434/diff:/var/lib/docker/overlay2/d5a4515d54748b4f23b640529dd992144babc8285ff772713e56f3a35d2022d6/diff:/var/lib/docker/overlay2/b1dfb74b927d71a8719ce2cbcb2f85467aa6d52e0c45be991abcc979b15e05ae/diff",
+                "MergedDir": "/var/lib/docker/overlay2/e9d8d1f3dd35d0feb40d808cb524d03aba32763ed457f4a9701244b0dbaf30a1/merged",
+                "UpperDir": "/var/lib/docker/overlay2/e9d8d1f3dd35d0feb40d808cb524d03aba32763ed457f4a9701244b0dbaf30a1/diff",
+                "WorkDir": "/var/lib/docker/overlay2/e9d8d1f3dd35d0feb40d808cb524d03aba32763ed457f4a9701244b0dbaf30a1/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "c4b226f7e1d1a74946d896c998916c040f28e3ffd9e419ba46fbb6bd73033a88",
+                "Source": "/var/lib/docker/volumes/c4b226f7e1d1a74946d896c998916c040f28e3ffd9e419ba46fbb6bd73033a88/_data",
+                "Destination": "apache2/htdocs",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "a2b368c112e2",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Tty": true,
+            "OpenStdin": true,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "HTTPD_PREFIX=/usr/local/apache2",
+                "HTTPD_VERSION=2.4.53",
+                "HTTPD_SHA256=d0bbd1121a57b5f2a6ff92d7b96f8050c5a45d3f14db118f64979d525858db63",
+                "HTTPD_PATCHES="
+            ],
+            "Cmd": [
+                "httpd-foreground"
+            ],
+            "Image": "httpd:2.4",
+            "Volumes": {
+                "./apache2/htdocs": {}
+            },
+            "WorkingDir": "/usr/local/apache2",
+            "Entrypoint": null,
+            "OnBuild": null,
+            "Labels": {},
+            "StopSignal": "SIGWINCH"
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "694e91d808057f3cea747ba33bcaa7e9c909ac01444a8019e70e53bc1ed8693c",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "4545"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "4545"
+                    }
+                ]
+            },
+            "SandboxKey": "/var/run/docker/netns/694e91d80805",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "97b8a8888f079234309fe904ad5d2ea0d58a16cb2f82e8a9095654566eeffc4e",
+            "Gateway": "172.17.0.1",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "172.17.0.4",
+            "IPPrefixLen": 16,
+            "IPv6Gateway": "",
+            "MacAddress": "02:42:ac:11:00:04",
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "NetworkID": "3453e4205d988205869c806729f4c470bc7dc41196f2c3f1afdeef2c0a63e3ce",
+                    "EndpointID": "97b8a8888f079234309fe904ad5d2ea0d58a16cb2f82e8a9095654566eeffc4e",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.4",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:11:00:04",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker stop a2b368c112e2
+a2b368c112e2
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker rm a2b368c112e2
+
+a2b368c112e2
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ %  docker images
+
+REPOSITORY              TAG           IMAGE ID       CREATED        SIZE
+cowsay                  latest        4efdd267c2f9   26 hours ago   228MB
+<none>                  <none>        ee94ebeb1987   27 hours ago   228MB
+ubuntu                  latest        ff0fea8310f3   7 days ago     72.8MB
+httpd                   2.4           b9bd7e513e0f   8 days ago     144MB
+debian                  stable-slim   63c7fbbbefe3   8 days ago     80.4MB
+debian                  latest        48c562c706d6   8 days ago     124MB
+busybox                 latest        2fb6fc2d97e1   2 weeks ago    1.24MB
+hello-world             latest        feb5d9fea6a5   6 months ago   13.3kB
+mjgargani/ubuntu-ping   latest        0f7e6b38026b   6 months ago   108MB
+chuanwen/cowsay         latest        d9ca6614554a   3 years ago    228MB
+andrius/ascii-patrol    latest        e8ee5d9e29bd   3 years ago    29.5MB
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker rmi -f  b9bd7e513e0f
+Error response from daemon: conflict: unable to delete b9bd7e513e0f (cannot be forced) - image is being used by running container 67e06ca81a36
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker rm 67e06ca81a36
+Error response from daemon: You cannot remove a running container 67e06ca81a36b6ccdc1ad2a96b3d295b83682f7fc931d8b04d1b990e31fe7bd0. Stop the container before attempting removal or force remove
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker stop 67e06ca81a36
+67e06ca81a36
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ % docker rm 67e06ca81a36
+67e06ca81a36
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+ %  docker rmi -f  b9bd7e513e0f
+Untagged: httpd:2.4
+Untagged: httpd@sha256:5238710afda67227f805b7563455365588afd4b7d9abcddbdfe76b01463c9df3
+Deleted: sha256:b9bd7e513e0fc49bd6703bde67cf6526033a9bade13a34b7be04e0e7339f6d2e
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-Back-End/Bloco-19-Utilizando-Containers/Orquestrando-containers-com-Docker-Compose
+
