@@ -1,0 +1,17 @@
+Exercício 5 - Após resolver o exercício anterior, responda: qual tipo de relacionamento a tabela city faz com a tabela country ?
+		R = O tipo de relacionamento N:1 - muitas cidades para um país
+
+
+
+Exercício 6 : Qual tipo de relacionamento a tabela country faz com a tabela city ?
+		R = O tipo de relacionamento 1:N - um país, para muitas cidades
+		
+
+				
+Exercício 7:	Abra tabela por tabela do banco sakila e encontre no mínimo 3 exemplos de um relacionamentos 1:N ou N:1. Resposta:	
+
+
+		N:1 >> language > film - muitos tipos de linguagem, para um filme
+		N:1 >> store > staff - variás lojas, pra um gerente
+		1:N >> filme > language - um filme, para vários tipos de linguagem
+		
