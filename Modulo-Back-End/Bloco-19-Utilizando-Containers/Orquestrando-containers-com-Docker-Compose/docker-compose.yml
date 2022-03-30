@@ -6,13 +6,13 @@ services:
     restart: always
     ports: 
       - 2368:2368
-      environment:
-        database__client: mysql
-        database__connection__database: ghost
-        database__connection__host: db
-         database__connection__password: ghost
-        database__connection__user: root        
-      depends_on:
+    environment:
+      - database__client=mysql
+      - database__connection__database=ghost
+      - database__connection__host=db
+      - database__connection__password=ghost
+      - database__connection__user=root        
+    depends_on:
         - db  
    
   db:
@@ -21,6 +21,6 @@ services:
       environment:
         MYSQL_ROOT_PASSWORD: ghost
         volumes:
-          - db-data:/var/libmysql
+          - db-data: /var/libmysql
         networks:
           - my-network  
