@@ -44,11 +44,11 @@ describe("Função que recebe número como parâmetro e retorna uma string como 
     describe("Retorno da resposta", () => {
       it("string", () => {
         const result = returnString("string");
-        expect(result).to.be.a("string"); // pq aqui é "a"?
+        expect(result).to.be.a("string"); 
       });
       it("O parâmetro da função precisa ser d type number", () => {
         const result = returnString("kakaka");
-        expect(result).to.be.equals("o parâmetro precisa ser do tipo number"); // pq aqui é equals e n a?
+        expect(result).to.be.equals("o parâmetro precisa ser do tipo number"); 
       });
     });
   });

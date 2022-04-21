@@ -1,0 +1,21 @@
+{
+  "name": "middelwares-express",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start1": "node ./atividade1/index.js",
+    "dev1": "nodemon ./atividade1/index.js",
+    "dev2": "nodemon ./atividade2/index.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.3"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.15"
+  }
+}
