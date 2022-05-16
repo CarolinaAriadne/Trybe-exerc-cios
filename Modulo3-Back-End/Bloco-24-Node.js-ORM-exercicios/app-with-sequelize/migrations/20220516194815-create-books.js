@@ -1,8 +1,8 @@
-'use strict';
+"use strict";
 
 module.exports = {
-  async up (queryInterface, DataTypes) {
-    return queryInterface.createTable('Books', {
+  async up(queryInterface, DataTypes) {
+    return queryInterface.createTable("Books", {
       id: {
         allowNull: false,
         autoIncrement: true,
@@ -27,12 +27,12 @@ module.exports = {
       },
       updatedAt: {
         allowNull: false,
-        type: DataTypes.DATE
-      }
+        type: DataTypes.DATE,
+      },
     });
   },
 
-  async down (queryInterface) {
-    return queryInterface.dropTable('Books')
-  }
+  async down(queryInterface) {
+    return queryInterface.dropTable("Books");
+  },
 };
