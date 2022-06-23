@@ -1,6 +1,6 @@
 import Person from "./Person";
 
-class Student extends Person {
+ class Student extends Person {
   private _enrollment = String();
   private _examsGrades: number[] = [];
   private _worksGrades: number[] = [];
@@ -8,6 +8,21 @@ class Student extends Person {
   constructor(name: string, birthDate: Date) {
     super(name, birthDate);
     this._enrollment = this.generateEnrollment();
+  }
+  get name(): string {
+    throw new Error("Method not implemented.");
+  }
+  set name(newValue: string) {
+    throw new Error("Method not implemented.");
+  }
+  get birthDate(): Date {
+    throw new Error("Method not implemented.");
+  }
+  set birthDate(newValue: Date) {
+    throw new Error("Method not implemented.");
+  }
+  validateBirthDate(value: Date): void {
+    throw new Error("Method not implemented.");
   }
 
   get enrollment(): string {

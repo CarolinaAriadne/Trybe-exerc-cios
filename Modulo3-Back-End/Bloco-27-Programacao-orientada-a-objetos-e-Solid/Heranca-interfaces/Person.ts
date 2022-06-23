@@ -1,4 +1,5 @@
-class Person {
+import Student from "./Student";
+ abstract class Person {
   // name: string;
   // birthDate: Date;
 
@@ -12,6 +13,7 @@ class Person {
   }
 
   set name(newValue: string){
+    this.validateName(newValue);
     this.name = newValue;
   }
 
@@ -21,6 +23,7 @@ class Person {
 
   set birthDate(newValue: Date){
     this. birthDate = newValue;
+    this.validateBirthDate(newValue);
   }
 
   static getAge(newValue: Date):number { // recebe Date e retorna number
@@ -29,7 +32,7 @@ class Person {
     return Math.floor(count/yeartsMs)
   }
 
-   validateName(newValue: string):void{
+    private validateName(newValue: string):void{
     if(newValue.length < 3) throw new Error('O nome precisa ter no mínimo 3 caracteres')
   }
 
@@ -39,17 +42,13 @@ class Person {
   }
 }
 
-const joao = new Person('Joao Paulo', new Date('1980/01/25'));
-const marcia = new Person('Marcia Silva', new Date('2005/10/02'));
+// const joao = new Person('Joao Paulo', new Date('1980/01/25'));
+// const marcia = new Person('Marcia Silva', new Date('2005/10/02'));
+
+const joao2 = new Student('Joao Carlos', new Date('1658/01/25'))
+console.log(joao2)
 
 export default Person;
 
-
-// `Class`: Nome da classe, caso seja uma classe
-// `Interface`: Nome da interface, caso seja uma interface
-// `Extends`: Classe da qual herda (superclasse), caso exista
-// `Implements`: Interfaces a qual implementa, caso exista
-// `Attributes`: Atributos
-// `Methods`: Métodos
-// `Validations`: Validações que devem ser aplicadas aos atributos
+// export default Person;
 

@@ -14,6 +14,8 @@ const testInterfaceEmployee: Employee = {
 
     generateRegistration(): string {
         const randon = String(Date.now() * (Math.random() + 1)).replace(/\w/g,'');
+
+        return `qualquer coisa ${randon}`;
     }
 }
 
