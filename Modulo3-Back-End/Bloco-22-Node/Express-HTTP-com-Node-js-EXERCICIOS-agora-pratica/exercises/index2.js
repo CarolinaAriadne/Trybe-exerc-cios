@@ -36,17 +36,15 @@ app.post("/simpsons", async (req, res) => {
   //   return res.status(409).json({ message: "id already exists" });
   // }
   //   return verificyCaracter.push({id, name});
-  
 
-if(simpson.map(({id}) => id.includes(id))){
-  return res.status(409).json({ message: 'id already exists' });
-}
+  if (simpson.map(({ id }) => id.includes(id))) {
+    return res.status(409).json({ message: "id already exists" });
+  }
 
-simpson.push({ id, name });
-await simpsonsUtils.setSimpsons(simpson);
+  simpson.push({ id, name });
+  await simpsonsUtils.setSimpsons(simpson);
 
-return res.status(204).end();
-  
+  return res.status(204).end();
 });
 
 app.listen(PORT, () => console.log(`A porta é a ${PORT}`));
