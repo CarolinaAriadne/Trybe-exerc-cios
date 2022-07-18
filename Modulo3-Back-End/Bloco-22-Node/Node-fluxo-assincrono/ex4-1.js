@@ -1,75 +1,19 @@
+const fs = require("fs").promises;
 
-const fs = require('fs').promises;
+fs.readFile("./simpson.json", "utf-8")
+  .then((simpson) => {
+    return JSON.parse(simpson);
+  })
+  .then((simpson) => {
+    return simpson.map(({ id, name }) => `${id} - ${name}`);
+  })
+  .then((retorno) => retorno.forEach((retorno) => console.log(retorno)))
 
-fs.readFile('./simpson.json', 'utf-8')
-    .then((simpson) => {
-        return JSON.parse(simpson);
-    })
-    .then((simpson) => {
-      return simpson.map(({ id, name}) => `${id} - ${name}`)  
-    })
-    .then((retorno)=> retorno.forEach((retorno) => console.log(retorno))
-    )
+  .catch((err) => {
+    console.error(`Erro ao ler arquivo: ${err.message}`);
+  });
 
-    .catch((err) => {
-        console.error(`Erro ao ler arquivo: ${err.message}`)
-    })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+  
 
 // const axios = require('axios');
 
