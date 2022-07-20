@@ -1,0 +1,13 @@
+use("heroes");
+
+db.information.find({"aspects.hairColor":{$not: {$lte:180}}});
+
+db.information.countDocuments();
+
+db.information.find({"aspects.height":{$lt: 180}});
+
+db.information.find({"aspects.height":{$lte:180}});
+
+db.information.find({"aspects.hairColor":{$in: ["black", "No Hair"]}});
+
+db.information.deleteMany({publisher: "Geroge Lucas"});
