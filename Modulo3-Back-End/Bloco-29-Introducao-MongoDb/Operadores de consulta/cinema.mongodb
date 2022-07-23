@@ -1,0 +1,22 @@
+use('cinema');
+
+db.movies.countDocuments({});
+
+db.movies.find(
+  {category: { $all: [ "action", "adventure" ] },
+ imdbRating:{$gt: 7} }
+);
+
+db.movies.find({ratings:{$elemMatch: {$gte: 100, $lte:105}}},
+ {title: 1, ratings:1, _id:0});
+
+db.movies.find({ratings:{$elemMatch:{$gte:64, $lte:105, 
+$mod: [9,0]}}}, {_id:0, title:1, ratings:1});
+
+db.movies.find({ratings: {$size:4}}, {_id:0, title:1})
+
+db.movies.find({$or:[{category:{$all:["sci-fi"]}}, {ratings:{$elemMatch: {$gt: 199}}}]},
+ {_id:0, title:1, ratings:1, category:1})
+
+
+db.movies.find({description:{$regex:/humanity/}});
