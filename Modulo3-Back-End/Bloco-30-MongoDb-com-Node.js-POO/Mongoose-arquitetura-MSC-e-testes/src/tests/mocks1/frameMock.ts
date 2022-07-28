@@ -1,6 +1,6 @@
 import IFrame from '../../interfaces/Frame';
 
-const frameMock:IFrame = {
+const frameMock1:IFrame = {
     material: 'Ouro',
     color: 'Daquele naipe',
 };
@@ -23,7 +23,7 @@ const frameMockForChangeWithId:IFrame & {_id: string} ={
 }
 
 export {
-     frameMock,
+     frameMock1,
      frameMockEWithId,
      frameMockForChange,
      frameMockForChangeWithId,
