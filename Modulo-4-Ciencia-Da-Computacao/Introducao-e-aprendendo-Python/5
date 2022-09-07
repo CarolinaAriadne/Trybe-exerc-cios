@@ -1,0 +1,66 @@
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-4-Ciencia-Da-Computacao/Introducao-e-aprendendo-Python
+ % python3
+Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> pantheon_of_arton = [ {"nome": "Wyna", "dominio": "Magia"}, {"nome": "Nimb", "dominio": "Sorte"}, {"nome": "Ahadarak", "dominio": "Tormenta"}, ]
+>>> pantheon_of_arton
+[{'nome': 'Wyna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}, {'nome': 'Ahadarak', 'dominio': 'Tormenta'}]
+>>> from random import randint
+>>> 
+>>> dice_roll = randint(1,20)
+>>> 
+>>> if dice_roll == 1:
+...  print("Vixi...Deu ruim")
+... elif 2 <= dice_roll <= 15:
+...   print("Ahadarak, por que me atormentas?")
+... elif 16 <= dice_roll <= 19:
+...   print("Nimb, obrigado pela sorte!")
+... else:
+...   print("Agora ninguem me segura!")
+... 
+Ahadarak, por que me atormentas?
+>>> 
+
+
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-4-Ciencia-Da-Computacao/Introducao-e-aprendendo-Python
+ % python3Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> pantheon_of_arton = [
+... {"nome": "Wynna", "dominio": "Magia"},
+... {"nome": "Nimb", "dominio": "Sorte"},
+... {"nome": "Ahadarak", "dominio": "Tormenta"},
+... ]
+>>> pantheon_of_arton
+[{'nome': 'Wynna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}, {'nome': 'Ahadarak', 'dominio': 'Tormenta'}]
+>>> domains = []
+>>> for god in pantheon_of_arton:
+...     domains.append(god["dominio"])
+... 
+>>> domains
+['Magia', 'Sorte', 'Tormenta']
+>>> domains = [god
+...            for god in pantheon_of_arton
+...            if god["dominio"] != "Tormenta"  
+... domains
+  File "<stdin>", line 4
+    domains
+    ^
+SyntaxError: invalid syntax
+>>> domains
+['Magia', 'Sorte', 'Tormenta']
+>>> domains = [god
+...            for god in pantheon_of_arton
+...            if god["dominio"] != "Tormenta"]
+>>> domains
+[{'nome': 'Wynna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}]
+>>> domains = [god for god in pantheon_of_arton if god["dominio"] != "Tormenta"]
+>>> domains
+[{'nome': 'Wynna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}]
+>>> domains = [god["dominio"] for god in pantheon_of_arton if god["dominio"] != "Tormenta"]
+>>> domains
+['Magia', 'Sorte']
+>>> 
+
+

@@ -1,0 +1,44 @@
+% python3
+Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> help('all')
+
+>>> help('any')
+
+>>> help('enumerate')
+
+>>> nomes_1 = ["Felps", "Carlos", "Will", "Bux"]
+>>> nomes_2 = ["Flavio", "Carlos", "Roni", ""]
+>>> nomes_3 = [1,2,3,4]
+>>> numeros_1 = [1,2,3,4]
+>>> numeros_2 = [0,5,6,7]
+>>> all(nomes_1)
+True
+>>> all(nomes_2)
+False
+>>> all(numeros_1)
+True
+>>> all(numeros_2)
+False
+>>> any(numeros_1)
+True
+>>> any(numeros_2)
+True
+>>> enumerate(nomes_1)
+<enumerate object at 0x7fe4262f00c0>
+>>> for elem in enumerate(nomes_1):
+...     print(elem)
+... 
+(0, 'Felps')
+(1, 'Carlos')
+(2, 'Will')
+(3, 'Bux')
+>>> for index, elem in enumerate(nomes_1):
+...     print(index,elem)
+... 
+0 Felps
+1 Carlos
+2 Will
+3 Bux
+>>> 

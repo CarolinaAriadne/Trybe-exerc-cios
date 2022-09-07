@@ -1,9 +1,9 @@
 // src/Cars.jsx
 
-import React, { useContext } from 'react';
+import React, {useContext} from 'react';
 import CarsContext from './context/CarsContext';
 import carBlue from './images/carBlue.jpeg';
-import carRed from './images/carRed.jpeg';
+import carRed from './images/carYellow.jpeg';
 import carYellow from './images/carYellow.jpeg';
 
 const Cars = () => {

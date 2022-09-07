@@ -1,0 +1,40 @@
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-4-Ciencia-Da-Computacao/Introducao-e-aprendendo-Python
+ % python3Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> pantheon_of_arton = [
+... {"nome": "Wynna", "dominio": "Magia"},
+... {"nome": "Nimb", "dominio": "Sorte"},
+... {"nome": "Ahadarak", "dominio": "Tormenta"},
+... ]
+>>> pantheon_of_arton
+[{'nome': 'Wynna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}, {'nome': 'Ahadarak', 'dominio': 'Tormenta'}]
+>>> domains = []
+>>> for god in pantheon_of_arton:
+...     domains.append(god["dominio"])
+... 
+>>> domains
+['Magia', 'Sorte', 'Tormenta']
+>>> domains = [god
+...            for god in pantheon_of_arton
+...            if god["dominio"] != "Tormenta"  
+... domains
+  File "<stdin>", line 4
+    domains
+    ^
+SyntaxError: invalid syntax
+>>> domains
+['Magia', 'Sorte', 'Tormenta']
+>>> domains = [god
+...            for god in pantheon_of_arton
+...            if god["dominio"] != "Tormenta"]
+>>> domains
+[{'nome': 'Wynna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}]
+>>> domains = [god for god in pantheon_of_arton if god["dominio"] != "Tormenta"]
+>>> domains
+[{'nome': 'Wynna', 'dominio': 'Magia'}, {'nome': 'Nimb', 'dominio': 'Sorte'}]
+>>> domains = [god["dominio"] for god in pantheon_of_arton if god["dominio"] != "Tormenta"]
+>>> domains
+['Magia', 'Sorte']
+>>> 
+

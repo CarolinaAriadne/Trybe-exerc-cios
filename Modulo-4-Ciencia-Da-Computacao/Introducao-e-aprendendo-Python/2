@@ -1,0 +1,30 @@
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-4-Ciencia-Da-Computacao/Introducao-e-aprendendo-Python
+ % python3
+Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> a = 5
+>>> type(a)
+<class 'int'>
+>>> help(list)
+
+>>> b = 5.0
+>>> type(b)
+<class 'float'>
+>>> gran_jpgadores_xadrez = ['Fabio', 'Pedro', 'Fabiola']
+>>> gran_jpgadores_xadrez
+['Fabio', 'Pedro', 'Fabiola']
+>>> gran_jpgadores_xadrez[0]
+'Fabio'
+>>> gran_jpgadores_xadrez[1]
+'Pedro'
+>>> gran_jpgadores_xadrez.append('Camila')
+>>> gran_jpgadores_xadrez
+['Fabio', 'Pedro', 'Fabiola', 'Camila']
+>>> gran_jpgadores_xadrez.remove('Camila')
+>>> gran_jpgadores_xadrez
+['Fabio', 'Pedro', 'Fabiola']
+>>> mais_jogadores_xadrez = ['Josefina', 'Irene', 'Osvaldo', 'Honorio']
+>>> mais_jogadores_xadrez
+['Josefina', 'Irene', 'Osvaldo', 'Honorio']
+>>> 

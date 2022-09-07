@@ -1,0 +1,66 @@
+carolina@carolina-Inspiron-3501 ~/Trybe/Trybe-exercícios/Modulo-4-Ciencia-Da-Computacao/Introducao-e-aprendendo-Python
+ % python3
+Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> grandes_jogadores_xadrez = ['Pedro', 'Luiza', 'Camila', 'Sergio']
+>>> grandes_jogadores_xadrez
+['Pedro', 'Luiza', 'Camila', 'Sergio']
+>>> mais_jogadores_xadrez = ['Honorio', 'Irene', 'Josefina', 'Joao']
+>>> mais_jogadores_xadrez
+['Honorio', 'Irene', 'Josefina', 'Joao']
+>>> grandes_jogadores_xadrez.extend(mais_jogadores_xadrez)
+>>> grandes_jogadores_xadrez
+['Pedro', 'Luiza', 'Camila', 'Sergio', 'Honorio', 'Irene', 'Josefina', 'Joao']
+>>> ('Magnus Carlos', 1)
+('Magnus Carlos', 1)
+>>> campeao_mundo = ('Magnus Carlos', 1)
+>>> campeao_mundo[0]
+'Magnus Carlos'
+>>> melhores_jogadores_ranking = [campeao_mundo]
+>>> melhores_jogadores_ranking
+[('Magnus Carlos', 1)]
+>>> melhores_jogadores_ranking.append(('Fabiano Costa', 2))
+>>> melhores_jogadores_ranking
+[('Magnus Carlos', 1), ('Fabiano Costa', 2)]
+>>> melhores_jogadores_ranking.extend([melhores_jogadores_ranking[2], 18])
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: list index out of range
+>>> melhores_jogadores_ranking.extend([grandes_jogadores_xadrez[2], 18])
+>>> melhores_jogadores_ranking
+[('Magnus Carlos', 1), ('Fabiano Costa', 2), 'Camila', 18]
+>>> jogador = {"nome": 'Alberto', "cidade": "Sao Jose"}
+>>> jogador[nome]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nome' is not defined
+>>> jogador = {"nome": "Alberto", "cidade": "Sao Jose"}
+>>> jogador[nome]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nome' is not defined
+>>> jogador2 = { "nome": "Pedro", "cidade": "Cotia" }
+>>> jogador2["nome"]
+'Pedro'
+>>> admin_user = ['Carol', 'Bonifacio']
+>>> data_squad = ['Luca', 'Rafael', 'Lola']
+>>> admin_user.intersection(data_squad)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+AttributeError: 'list' object has no attribute 'intersection'
+>>> admin_user2 = {'Alberto', 'Bonifacio'}
+>>> data_squad2 = {'Irene',  'Bonifacio'}
+>>> admin_user2.intersection(data_squad2)
+{'Bonifacio'}
+>>> all_users = {'Alberto', 'Bonifacio', 'Irene', 'Camila'}
+>>> all_users.difference(admin_user2)
+{'Camila', 'Irene'}
+>>> standard_acces_users = all_users.difference(admin_user2)
+>>> standard_acces_users
+{'Camila', 'Irene'}
+>>> admin_user2 = admin_user2.union(standard_acces_users)
+>>> admin_user2 = admin_user2.union(standard_acces_users)
+>>> admin_user2
+{'Alberto', 'Camila', 'Bonifacio', 'Irene'}
+>>> 
