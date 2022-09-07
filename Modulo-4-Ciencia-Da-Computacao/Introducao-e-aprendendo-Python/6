@@ -1,0 +1,86 @@
+% python3
+Python 3.8.10 (default, Jun 22 2022, 20:18:18) 
+[GCC 9.4.0] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> vogais = "aeiou"
+>>> frase = "O módulo de CS é bom demais, as dicas pythônicas fazem ficar melhor ainda."
+>>> lista_v = []
+>>> lista_c = []
+>>> for letra in frase
+  File "<stdin>", line 1
+    for letra in frase
+                     ^
+SyntaxError: invalid syntax
+>>> 
+>>> for letra in frase
+  File "<stdin>", line 1
+    for letra in frase
+                     ^
+SyntaxError: invalid syntax
+>>> for letra in frase:
+...     if letra in vogais:
+...             lista_v.append(letra)
+... 
+>>> lista_v
+['u', 'o', 'e', 'o', 'e', 'a', 'i', 'a', 'i', 'a', 'i', 'a', 'a', 'e', 'i', 'a', 'e', 'o', 'a', 'i', 'a']
+>>> for letra in frase:
+...     if letra not  in vogais:
+...             lista_c.append(letra)
+... 
+>>> lista_c
+['O', ' ', 'm', 'ó', 'd', 'l', ' ', 'd', ' ', 'C', 'S', ' ', 'é', ' ', 'b', 'm', ' ', 'd', 'm', 's', ',', ' ', 's', ' ', 'd', 'c', 's', ' ', 'p', 'y', 't', 'h', 'ô', 'n', 'c', 's', ' ', 'f', 'z', 'm', ' ', 'f', 'c', 'r', ' ', 'm', 'l', 'h', 'r', ' ', 'n', 'd', '.']
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> 
+>>> lista_v2 = [letra for letra in frase if letra in vogais]
+>>> lista_
+lista_c   lista_v   lista_v2  
+>>> lista_
+lista_c   lista_v   lista_v2  
+>>> lista_v2
+['u', 'o', 'e', 'o', 'e', 'a', 'i', 'a', 'i', 'a', 'i', 'a', 'a', 'e', 'i', 'a', 'e', 'o', 'a', 'i', 'a']
+>>> lista_c2 = [letra
+...             for letra in frase
+...             if letra not in vogais]
+>>> lista_c2
+['O', ' ', 'm', 'ó', 'd', 'l', ' ', 'd', ' ', 'C', 'S', ' ', 'é', ' ', 'b', 'm', ' ', 'd', 'm', 's', ',', ' ', 's', ' ', 'd', 'c', 's', ' ', 'p', 'y', 't', 'h', 'ô', 'n', 'c', 's', ' ', 'f', 'z', 'm', ' ', 'f', 'c', 'r', ' ', 'm', 'l', 'h', 'r', ' ', 'n', 'd', '.']
+>>> set__v2 = {letra for letra in frase if letra in vogais}
+>>> set_v2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'set_v2' is not defined
+>>> set__2
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'set__2' is not defined
+>>> set_v2 = {letra for letra in frase if letra in vogais}
+>>> set_v2
+{'u', 'i', 'e', 'o', 'a'}
+>>> 
