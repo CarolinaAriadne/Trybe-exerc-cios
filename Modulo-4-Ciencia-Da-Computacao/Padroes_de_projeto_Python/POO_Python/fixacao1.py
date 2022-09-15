@@ -1,6 +1,3 @@
-from black import LineGenerator
-from click import secho
-
 
 
 class Geladeira:
