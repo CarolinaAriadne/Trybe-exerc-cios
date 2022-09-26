@@ -1,0 +1,40 @@
+curl -i -X POST https://jsonplaceholder.typicode.com/comments \
+     -H 'Content-Type: application/json' \
+     -d $'{
+            "postId": 101,
+            "name": "Vitor Almeida",
+            "email": "vitor.almeida@alura.com.br",
+            "body": "De acordo ao manual do curl ( disponível online [...]"
+          }'
+HTTP/2 201 
+date: Mon, 26 Sep 2022 13:50:57 GMT
+content-type: application/json; charset=utf-8
+content-length: 168
+location: http://jsonplaceholder.typicode.com/comments/501
+x-powered-by: Express
+x-ratelimit-limit: 1000
+x-ratelimit-remaining: 999
+x-ratelimit-reset: 1664200259
+vary: Origin, X-HTTP-Method-Override, Accept-Encoding
+access-control-allow-credentials: true
+cache-control: no-cache
+pragma: no-cache
+expires: -1
+access-control-expose-headers: Location
+x-content-type-options: nosniff
+etag: W/"a8-+yMLHZer2CmKGc6hZoxqc+JU9W8"
+via: 1.1 vegur
+cf-cache-status: DYNAMIC
+report-to: {"endpoints":[{"url":"https:\/\/a.nel.cloudflare.com\/report\/v3?s=E0F54ixaQu8Tf57fBrKB6RoXN7q7KTui8VMxD5Lo6bFIMLFyvfNmeq5%2FLvmzy%2BAiEFqNc5gkr2qlUHjnBs8bmqbc3jUJMKeSnfcopQ%2B3ce18qGpMssIgfimx9RgO%2BLNkjeQcXyydUcYY0yv1r6aqf6vTaR%2FwP8uvCkSW"}],"group":"cf-nel","max_age":604800}
+nel: {"success_fraction":0,"report_to":"cf-nel","max_age":604800}
+server: cloudflare
+cf-ray: 750c78b67a66b3bb-MIA
+alt-svc: h3=":443"; ma=86400, h3-29=":443"; ma=86400
+
+{
+  "postId": 101,
+  "name": "Vitor Almeida",
+  "email": "vitor.almeida@alura.com.br",
+  "body": "De acordo ao manual do curl ( disponível online [...]",
+  "id": 501
+}%                  
