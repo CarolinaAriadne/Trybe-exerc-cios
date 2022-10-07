@@ -1,0 +1,10 @@
+#!/bin/sh
+'''exec' /home/carolina/Trybe/Trybe-exercícios/Modulo-4-Ciencia-Da-Computacao/Redes-raspagem-de-dados/Outras-ferramentas-raspagem-de-dados/.venv/bin/python3 "$0" "$@"
+' '''
+# -*- coding: utf-8 -*-
+import re
+import sys
+from setuptools.command.easy_install import main
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw|\.exe)?$', '', sys.argv[0])
+    sys.exit(main())
